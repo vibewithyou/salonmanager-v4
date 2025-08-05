@@ -1,0 +1,1 @@
+<?php // MapController liefert Salons + Filterdaten mit freien Terminen ?>

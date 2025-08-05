@@ -1,0 +1,1 @@
+<?php // UserAreaController: speichert Favoriten & zeigt Fortschritt ?>

@@ -1,0 +1,1 @@
+<h1>Produktlager</h1>@foreach($items as $i)<p>{{ $i->name }}: {{ $i->stock }}</p>@endforeach<form method='POST' action='/inventory/add'>@csrf<input name='name'><input name='stock' type='number'><button>Hinzufügen</button></form>

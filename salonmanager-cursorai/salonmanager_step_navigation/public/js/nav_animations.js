@@ -1,0 +1,1 @@
+document.querySelectorAll('#menu a').forEach(a=>{a.addEventListener('mouseover',()=>a.style.transform='scale(1.1)')});

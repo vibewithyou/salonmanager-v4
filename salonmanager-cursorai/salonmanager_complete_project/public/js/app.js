@@ -1,0 +1,1 @@
+console.log('SalonManager App geladen');

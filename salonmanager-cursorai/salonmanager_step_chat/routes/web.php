@@ -1,0 +1,1 @@
+<?php // ChatController mit Terminbezug & Archivierung ?>

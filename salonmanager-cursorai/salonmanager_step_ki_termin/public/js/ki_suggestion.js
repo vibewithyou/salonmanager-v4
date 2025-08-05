@@ -1,0 +1,1 @@
+fetch('/api/suggest').then(res=>res.json()).then(data=>{document.getElementById('suggestion').innerText = data.slot;});

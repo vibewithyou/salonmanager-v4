@@ -1,0 +1,1 @@
+// resources/views/customer/qr_card.blade.php

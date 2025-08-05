@@ -1,0 +1,1 @@
+<?php namespace App\Http\Middleware; class SetLocale { public function handle($r, $n) { app()->setLocale(session('locale','de')); return $n($r); } } ?>

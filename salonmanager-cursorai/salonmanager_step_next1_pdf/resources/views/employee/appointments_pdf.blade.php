@@ -1,0 +1,1 @@
+<h1>Meine Termine</h1>@foreach($appointments as $appt)<p>{{ $appt->date }} {{ $appt->client }}</p>@endforeach

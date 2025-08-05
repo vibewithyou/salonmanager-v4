@@ -1,0 +1,1 @@
+<h1>Mobile Ansicht Demo</h1><button>Test Button</button><input placeholder='Eingabe'>

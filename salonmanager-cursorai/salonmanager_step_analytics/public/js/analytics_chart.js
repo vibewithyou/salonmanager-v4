@@ -1,0 +1,1 @@
+const ctx = document.getElementById('chart'); new Chart(ctx, { type: 'bar', data: { labels:['Januar','Februar'], datasets:[{label:'Umsatz',data:[1200,1900]}] } });

@@ -1,0 +1,1 @@
+document.getElementById('filter').addEventListener('change', function(){ /* Reload Map Data */ }); var map = L.map('map').setView([51,10],6); L.tileLayer(...).addTo(map); /* Marker laden */

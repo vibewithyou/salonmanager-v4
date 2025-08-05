@@ -1,0 +1,1 @@
+Notification.requestPermission().then(p => { if(p==='granted'){ new Notification('Neue Bewertung!'); } });

@@ -1,0 +1,1 @@
+document.querySelectorAll('canvas').forEach(c=>{new QRCode(c, {text:'Produkt-ID', width:64, height:64});});

@@ -1,0 +1,1 @@
+<h1>Stylisten App Dashboard</h1><p>Mobile Ansicht</p>

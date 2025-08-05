@@ -1,0 +1,1 @@
+<?php // SepaAgbController prüft Zustimmung vor finaler Zahlung ?>

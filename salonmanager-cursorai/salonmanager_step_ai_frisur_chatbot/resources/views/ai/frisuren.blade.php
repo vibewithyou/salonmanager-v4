@@ -1,0 +1,1 @@
+<h1>Frisurenvorschläge (KI)</h1><form method='POST' enctype='multipart/form-data' action='/ai/frisur'><input type='file' name='photo'><button>Analysieren</button></form>@if(isset($suggestions))@foreach($suggestions as $s)<p>{{ $s }}</p>@endforeach@endif

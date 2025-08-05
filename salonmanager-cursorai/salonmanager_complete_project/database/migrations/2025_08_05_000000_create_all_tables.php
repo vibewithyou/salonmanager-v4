@@ -1,0 +1,1 @@
+<?php // Alle Tabellen inbegriffen ?>

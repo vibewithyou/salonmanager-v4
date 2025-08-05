@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', function() { var c = document.getElementById('calendar'); var calendar = new FullCalendar.Calendar(c, { editable: true, events: '/calendar/events', eventDrop: function(info){ /* Update backend */ } }); calendar.render(); });

@@ -1,0 +1,1 @@
+<h1>Kundenakte</h1>@foreach($notes as $note)<p>{{ $note->text }}</p>@endforeach<form method='POST' action='/crm/note'>@csrf<textarea name='text'></textarea><input type='hidden' name='user_id'><button>Speichern</button></form>

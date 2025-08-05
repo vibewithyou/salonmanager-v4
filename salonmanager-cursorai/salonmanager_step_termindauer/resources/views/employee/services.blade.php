@@ -1,0 +1,1 @@
+<form method='POST' action='/services'>@csrf<input name='name'><input name='duration' type='number'><button>Speichern</button></form>

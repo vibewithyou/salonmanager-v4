@@ -1,0 +1,1 @@
+<h1>Inspirationen</h1>@foreach($images as $img)<img src='{{ $img->url }}'>@endforeach<form method='POST' enctype='multipart/form-data' action='/gallery/upload'>@csrf<input type='file' name='image'><button>Hochladen</button></form>

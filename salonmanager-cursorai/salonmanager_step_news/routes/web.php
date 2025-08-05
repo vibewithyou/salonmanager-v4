@@ -1,0 +1,1 @@
+<?php // NewsController: CRUD für Aktionen je Salon ?>

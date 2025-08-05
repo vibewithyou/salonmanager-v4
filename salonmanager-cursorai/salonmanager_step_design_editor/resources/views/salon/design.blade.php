@@ -1,0 +1,1 @@
+<h1>Design anpassen</h1><form method='POST' action='/salon/design'>@csrf<input name='color' type='color'><input name='font'><button>Speichern</button></form>

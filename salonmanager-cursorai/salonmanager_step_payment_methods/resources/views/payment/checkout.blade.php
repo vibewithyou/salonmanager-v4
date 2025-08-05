@@ -1,0 +1,1 @@
+<h1>Zahlung</h1><button id='pay'>Jetzt zahlen</button><script src='/js/stripe_checkout.js'></script>

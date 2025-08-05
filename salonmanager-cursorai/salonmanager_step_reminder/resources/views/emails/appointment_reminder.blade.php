@@ -1,0 +1,1 @@
+<h1>Erinnerung an deinen Termin</h1><p>Lieber Kunde, dein Termin ist morgen um {{ $appointment->time }}.</p>

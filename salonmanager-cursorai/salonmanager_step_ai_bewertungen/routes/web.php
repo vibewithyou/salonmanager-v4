@@ -1,0 +1,1 @@
+<?php // Controller analysiert Bewertungen auf Stimmung/Trends ?>

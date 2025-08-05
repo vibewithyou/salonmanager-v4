@@ -1,0 +1,1 @@
+<h1>Meine Treuekarte</h1><p>Punkte: {{ $points }}</p>

@@ -1,0 +1,1 @@
+<?php // LoyaltyController: Punkte bei Buchung gutschreiben, anzeigen, verwalten ?>

@@ -1,0 +1,1 @@
+console.log('Bulk-Aktion geladen'); // Erweiterbar für weitere Aktionen

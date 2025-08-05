@@ -1,0 +1,1 @@
+<?php // CalendarController liefert Events je Stylist (frei/belegt) ?>

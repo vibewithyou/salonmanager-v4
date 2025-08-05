@@ -1,0 +1,1 @@
+<?php // LegalController: generiert DSGVO+AGB basierend auf Salonangaben ?>

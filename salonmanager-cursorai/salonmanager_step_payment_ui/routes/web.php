@@ -1,0 +1,1 @@
+<?php // PaymentUiController: prüft Modus, zeigt an + SEPA-Text ?>

@@ -1,0 +1,195 @@
+✅ Hier kommt deine **vollständige Funktionsbeschreibung der App „SalonManager“**
+– perfekt zur Weitergabe an Entwickler und zur Präsentation für Kunden.
+
+---
+
+# 📲 **SalonManager – App zur digitalen Salonverwaltung & Buchung**
+
+---
+
+## 🧩 **Ziel & Zweck der App**
+
+**SalonManager** ist eine webbasierte, mobilfähige All-in-One-App für Friseursalons, Barbershops und Beauty-Studios.
+Sie ermöglicht:
+
+* Online-Terminbuchung durch Kund\:innen
+* Verwaltung von Stylist\:innen, Diensten, Verfügbarkeiten
+* Kundenbindung (Treuekarte, Galerie, Chat)
+* Online-Zahlung & Rechnungssystem
+* Newsletter, Marketing, KI-basierte Frisurvorschläge
+* Admin- & Statistikanalyse
+
+Die App funktioniert als **PWA** (installierbar wie eine App) und läuft auf PCs, Tablets und Smartphones.
+
+---
+
+# 🔧 **Technik & Design**
+
+| Punkt              | Beschreibung                                                            |
+| ------------------ | ----------------------------------------------------------------------- |
+| System             | Laravel 11.x (PHP), MySQL, Blade, Bootstrap, JS                         |
+| Hosting            | Shared Hosting oder Server (z. B. Hetzner, IONOS), SSL-ready            |
+| Frontend           | Modern, responsive, Lucide Icons, Dark-Mode, Live-Styling pro Salon     |
+| App-Funktionalität | PWA-Manifest, offlinefähig, installierbar                               |
+| Mehrsprachigkeit   | Deutsch (vollständig), Englisch, Französisch, Italienisch (Vorbereitet) |
+| Sicherheit         | 2FA, Login-Log, DSGVO-Download, IP-Check, SSL                           |
+| Benutzerrollen     | Admin, Saloninhaber, Stylist, Kunde                                     |
+
+---
+
+# 📂 **Ordnerstruktur (Laravel-basiert)**
+
+```
+/app/Http/Controllers/        // Controller: Salon, Buchung, Zahlung, Chat, Admin
+/resources/views/             // Views: Startseite, Salonseiten, Kundenbereich
+/public/                      // Assets: CSS, JS, Bilder
+/routes/web.php               // Routen: Buchung, Salonwahl, Dashboard
+/database/migrations/         // Tabellen: Salons, Nutzer, Termine, Zahlungen, Chat etc.
+```
+
+---
+
+# ✅ **Funktionen – vollständig beschrieben (90+ Funktionen)**
+
+---
+
+## 1. 🎨 **Salonverwaltung & Design (15 Funktionen)**
+
+| Funktion                      | Beschreibung                                                    |
+| ----------------------------- | --------------------------------------------------------------- |
+| Eigene Salonseite             | Jeder Salon erhält eine eigene Seite mit Info, Galerie, Buchung |
+| Live-Editor                   | Farben, Texte, Logo, Design per Editor änderbar                 |
+| Standortanzeige               | Salonstandort auf interaktiver Karte                            |
+| Filterbare Karte              | Salons filtern nach Bewertung, Preis, Verfügbarkeit             |
+| Logo-Upload                   | Eigenes Logo je Salon                                           |
+| Galerieverwaltung             | Galerie mit Frisurenbildern je Salon                            |
+| Aktionsbereich                | Salon kann Aktionen posten (z. B. Rabatte)                      |
+| Teamprofil                    | Alle Stylist\:innen werden angezeigt                            |
+| Bewertungssystem              | Kunden können Sterne & Textbewertung abgeben                    |
+| Bewertungs-KI (geplant)       | KI analysiert Bewertungen (Stimmung/Trends)                     |
+| Mehrsprachige Inhalte         | Texte je Sprache einstellbar                                    |
+| Terminlängen pro Dienst       | Flexible Terminlänge je Dienst & Stylist                        |
+| Öffnungszeitenverwaltung      | Verwaltung der Öffnungszeiten je Salon                          |
+| QR-Code für Salonseite        | QR-Code generierbar für Print/Werbung                           |
+| Kundenbewertungen exportieren | Export aller Bewertungen als CSV                                |
+
+---
+
+## 2. 🧑‍🎨 **Stylist\:innen & Buchung (15 Funktionen)**
+
+| Funktion                       | Beschreibung                                   |
+| ------------------------------ | ---------------------------------------------- |
+| Buchung mit Stylist\:innenwahl | Kund\:innen wählen gezielt Stylist\:in         |
+| Verfügbarkeiten verwalten      | Stylists verwalten ihre Zeiten                 |
+| Blockierte Tage setzen         | Urlaub / Abwesenheit eintragen                 |
+| Kalenderansicht                | Monatskalender pro Stylist/Saalon              |
+| Dienstzeiten je Dienst         | Zeitaufwand je Dienst pro Stylist definierbar  |
+| Terminbestätigung              | Stylist\:in muss Termin annehmen oder ablehnen |
+| Terminchat                     | Kunden ↔ Stylist\:in Chat pro Termin           |
+| Terminexport (.ics)            | Termine als Kalenderdatei exportierbar         |
+| Google Calendar Sync           | (Geplant) Zwei-Wege-Sync mit Google Kalender   |
+| Dienstplan                     | Dienstplan pro Stylist einsehbar               |
+| Push-Benachrichtigungen        | bei neuer Buchung / Bewertung                  |
+| PDF-Stylistenübersicht         | Stylist\:in kann Termine als PDF exportieren   |
+| Kundenwunsch/Notiz             | Buchung enthält Wunschtext / Bildupload        |
+| Kundenfavorit speichern        | Kunde kann Stylist\:in als Favorit speichern   |
+| Stylistenteam Verwaltung       | Admin kann Stylist\:innen verwalten            |
+
+---
+
+## 3. 📅 **Buchungssystem (10 Funktionen)**
+
+| Funktion                     | Beschreibung                                    |
+| ---------------------------- | ----------------------------------------------- |
+| Buchungsseite                | Liste der Dienste → Auswahl → Kalender → Termin |
+| Wiederkehrende Termine       | (Geplant) Regelmäßige Buchungen möglich         |
+| Termin-Erinnerung per E-Mail | Vor Termin automatische Erinnerung              |
+| Filterbare Dienste           | Sortieren nach Dauer, Preis, Kategorie          |
+| Buchungsübersicht Kunde      | Alle Termine mit Status / Historie              |
+| Buchungsstatus               | Neu, bestätigt, abgelehnt, abgeschlossen        |
+| AGB-Zustimmung               | Pflicht vor Buchung                             |
+| Galerie bei Buchung          | Kunde kann Frisur aus Galerie „anheften“        |
+| Gutschein-Einlösung          | Online-Gutschein anwendbar                      |
+| Rabattfunktion               | Rabatte pro Dienst oder Aktion möglich          |
+
+---
+
+## 4. 💸 **Zahlung & Finanzen (12 Funktionen)**
+
+| Funktion                   | Beschreibung                               |
+| -------------------------- | ------------------------------------------ |
+| Online-Zahlung Stripe/SEPA | Stripe integriert, SEPA-Mandat bestätigt   |
+| Zahlungshistorie           | Alle Zahlungen für Kunde / Salon einsehbar |
+| Quittung / Rechnung        | PDF-Rechnung generierbar, inkl. Steuer-ID  |
+| Umsatzübersicht            | Tag, Woche, Monat live sichtbar            |
+| CSV-Export Finanzen        | Exporte für Buchhaltung                    |
+| Abo-Modell                 | Salon kann Abo buchen (Basic/Premium)      |
+| Zahlungserinnerung         | (Geplant) Erinnerung bei offener Zahlung   |
+| Gutscheinverkauf           | Kunde kauft digitalen Gutschein            |
+| Versandmodul               | (Geplant) Für Produktverkauf je Salon      |
+| DATEV-Export               | (Geplant) Export für Steuerberater         |
+| Kundenzahlung bestätigen   | Zahlung manuell als „bezahlt“ markieren    |
+| Rückerstattungsfunktion    | Buchung stornieren + Rückzahlung           |
+
+---
+
+## 5. 🧑‍💼 **Kundenbereich (10 Funktionen)**
+
+| Funktion              | Beschreibung                       |
+| --------------------- | ---------------------------------- |
+| Kundenprofil          | Name, Bild, Kontakt                |
+| Favoriten speichern   | Lieblingsstylist, Lieblingsdienste |
+| Treuekarte            | Punkte pro Buchung, einlösbar      |
+| Kundenhistorie        | Alle Termine, Zahlungen, Notizen   |
+| Galerie ansehen       | Galerie je Salon                   |
+| Chat mit Stylist\:in  | Nachrichten/Dateien                |
+| Wunschstylist angeben | Kunde gibt Wunschstylist\:in an    |
+| Kundenkonto löschen   | DSGVO-konform Löschung             |
+| Kundenfeedback        | Nach Buchung Bewertung             |
+| DSGVO-Download        | Alle Daten exportieren             |
+
+---
+
+## 6. 📣 **Marketing & KI (8 Funktionen)**
+
+| Funktion               | Beschreibung                               |
+| ---------------------- | ------------------------------------------ |
+| Newsletter-Modul       | E-Mail-Newsletter pro Salon                |
+| Push-Nachrichten       | Benachrichtigung ans Handy                 |
+| KI-Terminvorschläge    | Verfügbarkeit + Wunsch analysiert          |
+| KI-Frisurenvorschläge  | Bildergalerie per KI individuell           |
+| Frisuren-Anprobe (KI)  | Kunde lädt Bild → Frisur wird „anprobiert“ |
+| Chatbot für Support    | KI antwortet auf Fragen                    |
+| Bewertungsanalyse (KI) | Stimmung der Bewertungen                   |
+| Empfehlungssystem      | Ähnliche Dienste/Galerien vorgeschlagen    |
+
+---
+
+## 7. 🛠️ **Admin & Sicherheit (10 Funktionen)**
+
+| Funktion                 | Beschreibung                       |
+| ------------------------ | ---------------------------------- |
+| Nutzerverwaltung         | Admin legt Stylist\:in & Kunden an |
+| Rechteverwaltung         | Rollen: Admin, Stylist, Kunde      |
+| 2FA                      | Zwei-Faktor-Login                  |
+| Login-Protokoll          | Log aller Logins, IP               |
+| Backup-Funktion          | Export aller Daten                 |
+| DSGVO-Manager            | Export/Löschung aller Daten        |
+| App-Status anzeigen      | Live-Systemstatus                  |
+| Logs einsehbar           | Fehler, Zugriffe                   |
+| API-Schlüsselverwaltung  | (Geplant) API für externe Tools    |
+| Sicherheitseinstellungen | Zugriff IP-begrenzt, SSL, etc.     |
+
+---
+
+# ✅ Fazit: Du kannst diese Liste direkt verwenden für:
+
+* **Kundenpräsentation** (alle Funktionen auf einen Blick)
+* **Entwicklerbriefing** (100 % vollständige Funktionsübersicht)
+* **Weitere Planung** (z. B. Phasenweise Entwicklung, Priorisierung)
+
+---
+
+### ➤ Sag „PDF“, wenn ich dir daraus eine **druckfertige Datei** mache.
+
+Oder „ZIP final“, wenn du den **Code + diese Funktionsbeschreibung integriert** als ZIP willst.

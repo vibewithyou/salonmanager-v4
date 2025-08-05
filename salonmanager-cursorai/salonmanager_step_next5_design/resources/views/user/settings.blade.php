@@ -1,0 +1,1 @@
+<form method='POST' action='/settings/theme'>@csrf<select name='theme'><option value='light'>Hell</option><option value='dark'>Dunkel</option></select><button>Speichern</button></form>

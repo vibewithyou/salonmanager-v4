@@ -1,0 +1,1 @@
+@php $theme = Auth::user()->theme ?? 'light'; @endphp<link rel='stylesheet' href='/css/themes/{{ $theme }}.css'>

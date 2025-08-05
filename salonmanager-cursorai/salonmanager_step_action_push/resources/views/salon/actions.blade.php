@@ -1,0 +1,1 @@
+<h1>Aktionen planen</h1><form method='POST' action='/actions'>@csrf<input name='title'><input name='start' type='date'><input name='end' type='date'><button>Planen</button></form>

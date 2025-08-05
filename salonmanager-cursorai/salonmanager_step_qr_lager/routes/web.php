@@ -1,0 +1,1 @@
+<?php // LabelController: erzeugt QR-Etiketten für Produkte im Lager ?>

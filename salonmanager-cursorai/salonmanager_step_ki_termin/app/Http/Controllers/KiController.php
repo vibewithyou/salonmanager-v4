@@ -1,0 +1,1 @@
+<?php // KiController: wertet freie Slots aus, bietet optimalen Termin an ?>

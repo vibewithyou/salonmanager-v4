@@ -1,0 +1,1 @@
+<h1>Aktionen & News</h1>@foreach($news as $item)<p>{{ $item->title }}</p>@endforeach<form method='POST' action='/salon/news'>@csrf<input name='title'><textarea name='content'></textarea><button>Posten</button></form>

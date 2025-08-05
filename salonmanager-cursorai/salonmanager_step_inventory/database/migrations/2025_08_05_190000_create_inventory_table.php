@@ -1,0 +1,1 @@
+<?php // InventoryController: Lagerbestand verwalten + Warnung bei niedrigem Bestand ?>

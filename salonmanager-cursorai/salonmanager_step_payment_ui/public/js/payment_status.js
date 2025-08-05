@@ -1,0 +1,1 @@
+document.getElementById('mode').innerText = 'LIVE'; // Dynamisch je nach Konfiguration anzeigen

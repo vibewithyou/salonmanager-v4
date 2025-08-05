@@ -1,0 +1,4 @@
+
+button { font-size:1.4em; padding:1em 2em; border-radius:0.5em; }
+input, select { font-size:1.2em; padding:0.8em; width:100%; }
+body { touch-action: manipulation; }

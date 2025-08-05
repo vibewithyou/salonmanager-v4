@@ -1,0 +1,1 @@
+<h1>Bewertungsanalyse</h1>@foreach($stats as $stat)<p>{{ $stat['mood'] }}: {{ $stat['count'] }}</p>@endforeach

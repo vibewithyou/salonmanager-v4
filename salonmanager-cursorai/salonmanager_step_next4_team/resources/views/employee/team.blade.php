@@ -1,0 +1,1 @@
+<h1>Mein Team</h1>@foreach($team as $member)<p>{{ $member->name }}</p>@endforeach

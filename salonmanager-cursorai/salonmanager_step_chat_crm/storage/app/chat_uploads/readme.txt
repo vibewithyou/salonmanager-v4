@@ -1,0 +1,1 @@
+Hier werden Chat-Dateien gespeichert (z. B. Bilder, PDFs).

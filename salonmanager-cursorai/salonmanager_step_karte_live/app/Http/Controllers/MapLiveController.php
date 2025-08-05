@@ -1,0 +1,1 @@
+<?php // MapLiveController liefert Salons + Live freie Termine via API ?>

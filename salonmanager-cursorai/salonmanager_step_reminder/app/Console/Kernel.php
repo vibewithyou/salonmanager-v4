@@ -1,0 +1,1 @@
+<?php protected function schedule($schedule) { $schedule->command('appointments:remind')->daily(); } ?>

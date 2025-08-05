@@ -1,0 +1,1 @@
+<h1>Chat</h1>@foreach($messages as $m)<p>{{ $m->sender }}: {{ $m->text }}</p>@endforeach<form method='POST' action='/chat/send'>@csrf<input name='text'><input type='hidden' name='appointment_id'><button>Senden</button></form>

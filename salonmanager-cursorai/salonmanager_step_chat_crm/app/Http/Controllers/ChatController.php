@@ -1,0 +1,1 @@
+<?php // ChatController speichert Nachricht + Datei, zeigt Verlauf ?>

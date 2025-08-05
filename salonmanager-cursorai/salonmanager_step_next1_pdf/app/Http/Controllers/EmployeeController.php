@@ -1,0 +1,1 @@
+<?php // Controller/Route mit PDF-Export Logik ?>

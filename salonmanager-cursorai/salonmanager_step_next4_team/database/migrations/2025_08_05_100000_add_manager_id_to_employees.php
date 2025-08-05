@@ -1,0 +1,1 @@
+<?php Schema::table('employees', function($t){ $t->unsignedBigInteger('manager_id')->nullable(); }); ?>

@@ -1,0 +1,1 @@
+<?php // PWA Route Logik ?>

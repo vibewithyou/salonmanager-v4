@@ -1,0 +1,1 @@
+<?php // AdminBulkController: Export mehrerer Datensätze als CSV/PDF ?>

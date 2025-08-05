@@ -1,0 +1,1 @@
+<h1>KI-Terminvorschläge</h1>@foreach($suggestions as $s)<p>{{ $s->time }} mit {{ $s->stylist }}</p>@endforeach

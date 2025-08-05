@@ -1,0 +1,1 @@
+<?php namespace App\Console\Commands; use Illuminate\Console\Command; class SendAppointmentReminders extends Command { protected $signature = 'appointments:remind'; public function handle() { /* Reminder-Logik */ } } ?>

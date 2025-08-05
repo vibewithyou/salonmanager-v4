@@ -1,0 +1,1 @@
+<?php // ImpressumController: erzeugt Impressum für den jeweiligen Salon ?>

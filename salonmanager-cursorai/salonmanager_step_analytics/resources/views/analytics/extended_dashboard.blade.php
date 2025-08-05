@@ -1,0 +1,1 @@
+<h1>Analytics Dashboard</h1><canvas id='chart'></canvas><script src='/js/analytics_chart.js'></script>

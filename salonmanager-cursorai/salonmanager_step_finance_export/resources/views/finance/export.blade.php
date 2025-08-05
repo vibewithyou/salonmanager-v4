@@ -1,0 +1,1 @@
+<h1>Kassenbuch Export</h1><form method='POST' action='/finance/export'>@csrf<button>CSV Export</button></form>

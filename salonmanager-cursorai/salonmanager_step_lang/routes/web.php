@@ -1,0 +1,1 @@
+<?php // Locale-Routen für Sprachwahl ?>

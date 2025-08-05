@@ -1,0 +1,2 @@
+
+<!doctype html><html><head><link rel="manifest" href="/manifest.json"><script src="/js/pwa_install.js"></script><link rel="stylesheet" href="/css/mobile.css"></head><body>@yield('content')</body></html>

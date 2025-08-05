@@ -1,0 +1,1 @@
+Inhalt aus resources/views hier eingefügt (simuliert für ZIP-Gesamtpaket).
