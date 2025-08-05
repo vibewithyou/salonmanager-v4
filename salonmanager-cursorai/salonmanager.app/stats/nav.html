@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Awstats navigation</title>
+    <script language="javascript">
+        function change() {
+            top.stats.location= document.period.select.value + '/';
+        }
+    </script>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td><img src="logo.svg" title="Hestia Control Panel"></td>
+    <td><form name="period" action="" method="get">
+    <select name="select" ONCHANGE="change()">
+<option value=2025-08>August 2025</option>
+<option value=2025-07>July 2025</option>
+
+    </select>
+    </form>
+    </td>
+</tr>
+</table>
+</body>
+</html>

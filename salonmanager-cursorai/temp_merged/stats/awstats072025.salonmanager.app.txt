@@ -1,0 +1,924 @@
+AWSTATS DATA FILE 7.9 (build 20230108)
+# If you remove this file, all statistics for date 202507 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.salonmanager.app.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2033                
+POS_TIME 2718                
+POS_VISITOR 17184               
+POS_DAY 28683               
+POS_DOMAIN 3580                
+POS_LOGIN 3810                
+POS_ROBOT 3965                
+POS_WORMS 4755                
+POS_EMAILSENDER 4886                
+POS_EMAILRECEIVER 5029                
+POS_SESSION 28912               
+POS_FILESIZE 29221               
+POS_SIDER 29109               
+POS_FILETYPES 5164                
+POS_DOWNLOADS 5320                
+POS_OS 5368                
+POS_BROWSER 5682                
+POS_SCREENSIZE 7144                
+POS_UNKNOWNREFERER 7218                
+POS_UNKNOWNREFERERBROWSER 7434                
+POS_ORIGIN 7544                
+POS_SEREFERRALS 7682                
+POS_PAGEREFS 7845                
+POS_SEARCHWORDS 8078                
+POS_KEYWORDS 8230                
+POS_MISC 2381                
+POS_ERRORS 8289                
+POS_CLUSTER 3666                
+POS_SIDER_404 8463                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20250801000227 3579 795527 12785943766924
+FirstTime 20250721224703
+LastTime 20250731230948
+LastUpdate 20250801033018 657 0 656 0 0
+TotalVisits 363                 
+TotalUnique 297                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 297                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+DirectorSupport 0 0 0
+TotalMisc 0 0 0
+FlashSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+JavascriptDisabled 0 0 0
+RealPlayerSupport 0 0 0
+PDFSupport 0 0 0
+QuickTimeSupport 0 0 0
+AddToFavourites 0 75 0
+JavaEnabled 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 23 23 113728 122 124 2232707
+1 17 17 81672 158 161 4882252
+2 47 51 448550 164 225 8878406
+3 36 43 378694 160 202 5822455
+4 10 12 146847 167 213 7386742
+5 26 34 483225 125 144 5200858
+6 55 57 266132 183 256 1413414
+7 15 21 370184 116 139 1128652
+8 30 39 634868 106 110 917331
+9 15 15 74477 118 180 1335862
+10 6 6 45138 111 118 996058
+11 8 8 43380 154 165 1340772
+12 17 17 117109 97 106 1057011
+13 14 14 104616 159 163 4292467
+14 26 26 116683 117 144 1814185
+15 30 30 162010 114 186 9384676
+16 8 8 49402 121 137 2985724
+17 17 17 77601 139 157 3857561
+18 40 40 197280 220 269 3246632
+19 15 15 67824 162 174 4695904
+20 8 8 54793 144 145 3016196
+21 15 15 102063 144 196 3254261
+22 10 10 46238 167 182 5484343
+23 7 7 34451 147 153 3122840
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 495 533 4216965
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 18
+bot[\s_+:,\.\;\/\\-] 16 15466 20250731213004 14
+CheckMarkNetwork/ 14 37104 20250722054754 5
+Googlebot/ 13 47556 20250731093147 6
+unknown 11 432 20250731080713 11
+Dalvik/ 8 33229 20250731181937 0
+python 8 49402 20250731143539 0
+curl 6 40429 20250731075744 0
+MJ12bot/ 5 9727 20250731132257 3
+Go\-http\-client/ 5 7979 20250730012804 0
+BW/ 3 9749 20250729122720 1
+SemrushBot/ 1 24 20250729204500 1
+no_user_agent 2 11019 20250731145813 0
+scanner 3 3620 20250722083630 0
+[\s_+:,\.\;\/\\-]bot 2 48 20250722231550 2
+checker 2 2022 20250722083959 0
+MSIE[\x20]6 3 13833 20250729075821 0
+AhrefsBot/ 2 48 20250723040207 2
+facebookexternalhit/ 2 314313 20250722033256 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 5
+html 1 692 0 0
+php 482 2215019 0 0
+Unknown 12 37198 0 0
+css 18 237462 0 0
+js 20 1726594 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 18
+android12 3 1
+macosx10 3 3
+ios_iphone 234 232
+macosx9 17 11
+android10 4 2
+winnt 1 1
+androidpie 26 20
+macosx11 11 11
+macos11 1 1
+win10 147 142
+macosx15 15 15
+androidoreo 2 2
+ios_ipad 1 1
+androidlollipop 3 3
+win7 4 4
+Unknown 8 8
+unix 3 1
+linux 50 37
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 69
+chrome51.0.2704.64 3 1
+edge18 2 2
+chrome130.0.0.0 1 1
+netscape5.0 3 3
+chrome124.0.0.0 2 2
+chrome105.0.0.0 1 1
+edge12 11 8
+chrome87.0.4280.88 1 1
+firefox102.0 1 1
+chrome121.0.0.0 6 4
+chrome126.0.0.0 1 1
+chrome89.0.4389.114 2 2
+chrome93.0.4577.63 1 1
+chrome37.0.2049.0 1 1
+safari9.0 1 1
+chrome91.0.4472.124 6 4
+chrome84.0.4147.125 1 1
+chrome47.0.2526.106 11 11
+chrome129.0.0.0 6 2
+chrome96.0.4664.110 1 1
+chrome122.0.0.0 2 2
+chrome128.0.0.0 10 10
+chrome41.0.2228.0 1 1
+chrome83.0.4103.61 2 2
+firefox103.0 1 1
+chrome66.0.3359.181 5 5
+chrome125.0.6422.60 3 3
+safari10.0 5 5
+chrome39.0.2171.95 3 3
+chrome89.0.4389.90 6 6
+chrome138.0.7204.23 1 1
+chrome58.0.3029.110 8 8
+chrome125.0.0.0 6 6
+safari17.0 1 1
+chrome117.0.0.0 23 22
+chrome79.0.3945.130 1 1
+chrome120.0.0.0 2 2
+android 3 1
+chrome115.0.0.0 1 1
+safari7.0.3 14 8
+chrome85.0.4182.0 9 3
+chrome122.0.6261.94 1 1
+chrome94.0.4606.61 17 17
+safari13.0.3 225 225
+firefox115 1 1
+firefox77.0 1 1
+chrome134.0.0.0 1 1
+chrome84.0.4147.89 3 3
+safari18.5 3 1
+chrome80.0.3987.119 3 1
+chrome117.0.5938.132 2 2
+firefox120.0 4 4
+mozilla 1 1
+firefox123 2 2
+chrome135.0.0.0 1 1
+chrome132.0.0.0 5 5
+chrome91.0.4472.114 2 2
+chrome74.0.3729.169 9 9
+chrome44.0.2403.157 2 2
+chrome80.0.3987.132 26 20
+chrome138.0.0.0 30 30
+Unknown 7 7
+chrome73.0.3683.90 3 3
+chrome116.0.0.0 2 2
+chrome79.0.3945.79 2 2
+firefox124.0 1 1
+chrome137.0.0.0 4 4
+chrome78.0.3904.108 5 5
+chrome63.0.3239.111 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+okhttp/4.9.2 20250722054423
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20250731053233
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+okhttp/4.9.2 20250722054423
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 224 227
+From1 0 0
+From2 1 1
+From3 6 6
+From4 264 299
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+www_google_com 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 3
+http://salonmanager.site 3 3
+http://salonmanager.website 2 2
+http://spyhost.site 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 7
+301 26 114415
+302 9 17118
+500 466 58190863
+403 51 277430
+504 1 794
+405 1 254836
+404 3283 28295853
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 258
+/dump.sql 2 -
+/karma.conf.json 2 -
+//website/wp-includes/wlwmanifest.xml 5 -
+/backup.zip 2 -
+//cms/wp-includes/wlwmanifest.xml 5 -
+/cms/wp-includes/wlwmanifest.xml 1 -
+/shared/config/config.js 2 -
+/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php 2 -
+/phpinfo.php 2 -
+/aws-secret.yaml 2 -
+/config/aws.json 2 -
+//wp1/wp-includes/wlwmanifest.xml 5 -
+//wp/wp-includes/wlwmanifest.xml 5 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php 2 -
+/config.js 2 -
+/laravel/framework/src/Illuminate/View/FileViewFinder.php 2 -
+/user/controllers/index.js 2 -
+/test_phpinfo.php 2 -
+/configs/s3_config.json 1 -
+/api/config/config.yml 2 -
+/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php 2 -
+/config/constants.js 2 -
+/secrets.yml 2 -
+/opt/aws/ses.env 1 -
+/website/wp-includes/wlwmanifest.xml 1 -
+/wp-config 2 -
+/config/storage.yml 2 -
+/wordpress 11 -
+//wp-includes/id3/license.txt/wordpress/wp-includes/wlwmanifest.xml 17 -
+/laravel/framework/src/Illuminate/Foundation/Application.php 2 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php 2 -
+/info.php 2 -
+/db.sql 2 -
+/server-info 2 -
+/phpinfo 2 -
+/helper.js 2 -
+/secrets.json 2 -
+/s3.js 2 -
+//github.com/highlightjs/highlight.js 2 -
+//blog/wp-includes/wlwmanifest.xml 5 -
+/_profiler/phpinfo/phpinfo.php 2 -
+/lara/phpinfo.php 2 -
+//xmlrpc.php 5 -
+/aws.yml 2 -
+/legacy/tests/9.1.1 1 -
+/backend/config/default.yml 2 -
+/server/config/database.js 2 -
+//test/wp-includes/wlwmanifest.xml 5 -
+/gists/cache 1 -
+/admin/controllers/merchant.js 2 -
+/wp-admin/setup-config.php 1247 -
+/api/config.js 2 -
+/sellers.json 4 -
+/static/js/main.e85f7a37.js 1 -
+//web/wp-includes/wlwmanifest.xml 5 -
+/legacy/tests/9.2.0 1 -
+/config/secrets.yml 1 -
+/laravel/info.php 2 -
+/test.php 2 -
+//wp-includes/id3/license.txt/2019/wp-includes/wlwmanifest.xml 17 -
+/wp-config.php.bak 2 -
+/api/user 1 -
+/controller/admin/post.js 2 -
+/app/config/parameters.yml 2 -
+/admin 1 -
+//wp-includes/id3/license.txt/site/wp-includes/wlwmanifest.xml 17 -
+/partner/config/config.js 2 -
+/api/credentials 1 -
+/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php 2 -
+/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php 2 -
+/oauth/authorize 1 -
+/admin.html 1 -
+/news/wp-includes/wlwmanifest.xml 1 -
+/blog.env 2 -
+//wp-includes/id3/license.txt/2020/wp-includes/wlwmanifest.xml 17 -
+/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php 2 -
+/getcpuutil.php-bakworking 2 -
+//wordpress/wp-includes/wlwmanifest.xml 5 -
+/test/wp-includes/wlwmanifest.xml 1 -
+/lara/info.php 2 -
+/config.yml 4 -
+/secrets/aws.json 1 -
+/blog/wp-includes/wlwmanifest.xml 1 -
+/admin/server_info.php 2 -
+//wp-includes/id3/license.txt/test/wp-includes/wlwmanifest.xml 17 -
+/laravel/framework/src/Illuminate/View/Factory.php 2 -
+/user/config/config.js 2 -
+/service/email_service.py 2 -
+/new 9 -
+/controllers/settings.js 2 -
+/static/js/main.141b0494.js 1 -
+/wp/wp-includes/wlwmanifest.xml 1 -
+/env.backup 2 -
+/swagger.json 2 -
+/backend/config/settings.yml 2 -
+//wp-includes/id3/license.txt/wp1/wp-includes/wlwmanifest.xml 17 -
+/prod.git/config 1 https://salonmanager.app/prod.git/config
+/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php 2 -
+/config/config.json 4 -
+/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php 2 -
+/termine 1 https://www.salonmanager.app/
+/main 9 -
+/index.html 1 -
+/js/mage/cookies.js 1 -
+/admin/controllers/partner.js 2 -
+/public/js/main.js 2 -
+/apis/config/config.js 1 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php 2 -
+/backup.tar.gz 2 -
+/application.properties 2 -
+/appsettings.json 2 -
+/wordpress/wp-admin/setup-config.php 1244 -
+/logs/debug.log 2 -
+/docker-compose.prod.yml 2 -
+//site/wp-includes/wlwmanifest.xml 5 -
+/i.php 2 -
+//2019/wp-includes/wlwmanifest.xml 5 -
+/xampp/phpinfo.php 2 -
+/config/local.yml 2 -
+/admin/config 4 -
+/my_env/palash.py 2 -
+/wp2/wp-includes/wlwmanifest.xml 1 -
+/my_env/newsletter.py 2 -
+/helpers/utility.js 1 -
+/debug/default/view 2 -
+/logs/aws/ses.log 1 -
+/app_dev.php/_profiler/phpinfo 2 -
+/static/js/main.js 2 -
+//wp-includes/wlwmanifest.xml 5 -
+/api/shared/config/config.env 2 -
+/ 3 salonmanager.website
+/storage/logs/laravel.log 1 -
+//wp-includes/id3/license.txt/web/wp-includes/wlwmanifest.xml 17 -
+/p.php 2 -
+/docker-compose.override.yml 2 -
+/config/config.env 2 -
+/llms.txt 1 -
+/gists/laravel 1 -
+/https%3A/fonts.googleapis.com/css2%3Ffamily%3DPlayfair%2BDisplay%3Awght%40400%3B600%3B700%26family%3DPoppins%3Awght%40300%3B400%3B500%3B600%26display%3Dswap 1 -
+/web.php 2 -
+/wp1/wp-includes/wlwmanifest.xml 1 -
+/credentials.json 2 -
+/.vscode/settings.json 2 -
+/my_env/chakaash.py 2 -
+/server.js 2 -
+/wp-includes/wlwmanifest.xml 1 -
+/test 1 -
+/config.env 1 -
+/apis/controllers/users.js 1 -
+/env 1 -
+/bk 9 -
+/2019/wp-includes/wlwmanifest.xml 1 -
+/_profiler/phpinfo 3 -
+/wp-content/debug.log 1 -
+/_phpinfo.php 2 -
+/main.yml 2 -
+/api/config.env 2 -
+/mytest/astech_robot.js 2 -
+/sites/favicon.png 1 -
+/config/env 1 -
+/old 9 -
+//wp-includes/id3/license.txt/wp/wp-includes/wlwmanifest.xml 17 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php 2 -
+/secrets/aws_ses.env 1 -
+/index.js 1 -
+/configs/routes-4aug.js 1 -
+/js/app.js 1 https://www.salonmanager.app/
+/gatsby-config.js 2 -
+/backup 9 -
+/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php 2 -
+/xmlrpc.php 3 -
+/config/secrets.json 2 -
+/home 9 -
+/docker-compose.dev.yml 2 -
+/administrator 1 -
+/dashboard/phpinfo.php 2 -
+/api/shared/config.env 2 -
+/wp 9 -
+/config/application.yml 2 -
+/web/wp-includes/wlwmanifest.xml 1 -
+/configs/routes.js 1 -
+/salon/termin 1 https://www.salonmanager.app/
+/bc 9 -
+/app.js 2 -
+/server_info.php 1 -
+//sito/wp-includes/wlwmanifest.xml 5 -
+/controller/api/post.js 2 -
+//wp-includes/id3/license.txt/xmlrpc.php 17 -
+/api/login 1 -
+/sendgrid.env 1 -
+/salon/wechseln 1 https://www.salonmanager.app/
+//2020/wp-includes/wlwmanifest.xml 2 -
+/wp-config.php 1 -
+/app-ads.txt 4 -
+/app.py 1 -
+//wp2/wp-includes/wlwmanifest.xml 5 -
+/scripts/nodemailer.js 2 -
+/sitemap.xml 7 https://salonmanager.app/sitemap.xml
+//wp-includes/id3/license.txt/2021/wp-includes/wlwmanifest.xml 17 -
+/ads.txt 5 -
+/laravel/framework/src/Illuminate/Routing/CallableDispatcher.php 2 -
+/controlpanel 1 -
+/laravel/framework/src/Illuminate/Pipeline/Pipeline.php 2 -
+/gists/pusher 1 -
+/backend/config/development.yml 2 -
+/aws/credentials 4 -
+/salon/galerie 2 https://www.salonmanager.app/
+//wp-includes/id3/license.txt/shop/wp-includes/wlwmanifest.xml 17 -
+/.idea/workspace.xml 2 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php 2 -
+/config/settings.json 2 -
+//shop/wp-includes/wlwmanifest.xml 5 -
+/secured/phpinfo.php 2 -
+/debug.log 2 -
+/config.yaml 4 -
+/sito/wp-includes/wlwmanifest.xml 1 -
+/laravel/framework/src/Illuminate/Foundation/helpers.php 2 -
+/css/app.css 1 https://www.salonmanager.app/
+/config/settings.prod 2 -
+/dot.git/config 1 https://salonmanager.app/dot.git/config
+/docker-compose.yml 3 -
+/js/main.js 2 -
+/laravel/framework/src/Illuminate/Routing/Router.php 2 -
+/config.json 3 -
+/site/wp-includes/wlwmanifest.xml 1 -
+/_profiler/phpinfo/info.php 2 -
+/AWSconf.git/config 1 https://salonmanager.app/AWSconf.git/config
+/laravel/framework/src/Illuminate/Routing/Route.php 2 -
+/config/aws.yml 5 -
+/api/objects/codes.php.save 2 -
+/server/s3.js 1 -
+/main.js 2 -
+/config/parameters.yml 2 -
+/2018/wp-includes/wlwmanifest.xml 1 -
+/helper/EmailHelper.js 2 -
+/error.log 2 -
+/favicon.png 9 -
+/sms.py 2 -
+/swagger.js 2 -
+//wp-includes/id3/license.txt/blog/wp-includes/wlwmanifest.xml 17 -
+/cloud/Scraper.js 2 -
+/shop/wp-includes/wlwmanifest.xml 1 -
+//news/wp-includes/wlwmanifest.xml 5 -
+/database.sql 2 -
+/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php 2 -
+/static/js/2.ca066a4b.chunk.js 1 -
+/wordpress/wp-includes/wlwmanifest.xml 1 -
+//media/wp-includes/wlwmanifest.xml 3 -
+/cmd_sco 4 -
+/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php 2 -
+/media/wp-includes/wlwmanifest.xml 1 -
+/logs/app.log 2 -
+/server-info.php 2 -
+//wp-includes/id3/license.txt/cms/wp-includes/wlwmanifest.xml 17 -
+/config/settings.local 2 -
+//2018/wp-includes/wlwmanifest.xml 3 -
+/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php 2 -
+/settings.py 2 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 297
+89.12.234.90 21 21 88851 20250722154925
+59.14.17.48 20 26 374332 20250728084234
+144.217.91.65 19 22 88848 20250722052501
+183.134.59.131 11 11 50407 20250731181906
+146.70.185.32 9 9 35704 20250730030800
+51.79.160.196 9 9 13087 20250722064744
+34.127.41.246 7 7 10507 20250730172011
+168.194.164.61 7 7 26200 20250729062609
+49.51.183.15 4 4 30092 20250731020318
+3.220.101.67 4 4 4044 20250722054423
+94.247.172.129 3 3 22569 20250730180431
+54.197.125.70 2 4 109348 20250722025852
+43.135.142.7 1 1 2132 20250731150408
+132.232.203.74 3 3 17178 20250728221951
+45.148.242.57 1 1 7523 20250729153454
+182.44.2.148 2 2 15046 20250730151741
+43.157.50.58 1 1 2132 20250729020258
+170.106.113.235 2 2 9655 20250731032158
+45.90.60.235 1 1 7523 20250731095011
+44.201.177.64 3 3 4794 20250722020432
+91.227.68.183 1 1 6892 20250730233552
+43.155.162.41 1 1 2132 20250730151047
+182.42.104.32 1 1 7523 20250730182959
+45.90.60.138 1 1 1011 20250722063843
+104.164.126.57 2 2 2022 20250722083203
+43.131.39.179 1 1 7523 20250731150411
+129.226.213.145 2 2 9655 20250731171223
+141.95.175.164 1 3 107750 20250722053200
+52.87.44.246 1 3 107750 20250722032227
+34.173.220.98 1 1 2814 20250729022033
+34.126.134.243 2 2 15046 20250728195311
+49.51.253.83 1 1 7523 20250731144044
+176.53.222.37 1 1 2132 20250728054247
+52.205.183.147 1 1 7523 20250722144241
+95.177.180.82 1 1 2132 20250728021353
+5.133.192.160 1 1 7523 20250731091056
+43.167.245.18 1 1 7523 20250729150329
+43.128.149.102 1 1 7523 20250731081025
+43.128.156.124 1 1 7523 20250729005610
+185.180.230.193 2 2 4315 20250731183922
+43.153.15.51 1 1 2132 20250731111448
+43.165.189.110 1 1 7523 20250730024839
+170.106.72.93 1 1 2132 20250727180429
+162.62.231.139 1 1 2132 20250731001611
+172.82.65.38 1 1 7523 20250728001408
+172.226.108.24 1 3 113421 20250722084209
+44.236.207.248 1 1 2132 20250730012805
+104.232.194.230 1 1 1011 20250722055019
+43.157.82.252 2 2 3143 20250731124330
+43.153.123.3 1 1 7523 20250728120425
+176.53.218.189 1 1 2132 20250731125929
+54.202.220.53 1 1 7523 20250729093422
+43.157.142.101 1 1 7523 20250731150309
+43.130.3.122 1 1 7523 20250727210524
+217.160.152.2 2 4 108761 20250722082621
+82.152.98.79 1 1 2814 20250731172613
+43.131.32.36 1 1 7523 20250729040237
+49.51.72.236 1 1 2132 20250729212409
+192.36.109.104 1 1 1011 20250722065534
+205.169.39.58 1 1 7523 20250729024228
+170.106.180.139 2 2 4264 20250730000540
+43.153.74.75 1 1 2132 20250730150422
+95.177.163.4 2 2 9655 20250729083224
+154.223.139.31 1 1 2132 20250731095013
+107.22.88.5 1 1 1598 20250722024743
+54.174.109.174 1 1 1011 20250722033225
+149.57.180.27 1 1 7523 20250729183905
+35.95.15.32 1 1 1011 20250722030620
+49.51.52.250 2 2 15046 20250730180042
+43.157.53.115 2 2 4264 20250730195241
+43.130.31.17 1 1 2132 20250729010407
+43.166.224.244 2 2 15046 20250730082002
+170.106.35.187 2 2 15046 20250731175417
+43.159.149.216 1 1 7523 20250728184628
+43.134.141.244 2 2 4264 20250727234828
+49.51.178.45 1 1 7523 20250728020046
+49.51.183.84 1 1 2132 20250729180453
+138.199.236.196 1 1 7523 20250728043225
+43.153.36.110 1 1 7523 20250728010400
+49.51.38.193 1 1 7523 20250731000459
+154.220.164.253 2 2 9655 20250728063135
+43.153.76.247 1 1 2132 20250728024316
+51.159.102.236 1 1 7464 20250722140244
+50.19.57.22 1 1 1598 20250722035545
+43.153.58.28 1 1 7523 20250731180125
+101.42.117.179 2 2 15046 20250731130922
+43.130.37.243 2 2 9655 20250730231230
+49.51.183.220 2 2 8534 20250728123319
+180.110.203.108 3 3 22569 20250729104820
+34.72.176.129 1 1 7523 20250729023209
+49.51.243.95 1 1 2132 20250731045530
+176.53.221.131 1 1 7523 20250728063127
+43.157.95.239 1 1 7523 20250728210323
+170.106.197.109 1 1 7523 20250729180032
+170.106.165.76 2 2 15046 20250729043810
+43.130.40.120 2 2 9655 20250731021339
+170.106.193.108 2 2 15046 20250730191726
+43.153.19.83 1 1 7523 20250731180737
+43.156.204.134 1 1 7523 20250728075714
+89.104.111.59 1 1 1011 20250722063834
+101.33.81.73 1 1 2132 20250729115803
+170.106.15.3 1 1 7523 20250731124314
+43.156.228.27 1 1 7523 20250729194414
+46.138.250.165 1 1 7523 20250731230948
+45.85.66.97 1 1 7523 20250727180059
+43.159.136.201 1 1 7523 20250730064342
+43.166.255.102 1 1 2132 20250729171822
+104.232.194.80 1 1 1011 20250722055321
+110.172.98.2 1 1 1429 20250721231054
+43.130.78.203 1 1 7523 20250728174427
+43.157.98.187 1 1 7523 20250731060506
+43.130.102.223 1 1 7523 20250731194114
+52.201.254.186 3 3 3033 20250722064809
+54.80.144.209 1 3 107750 20250722072443
+192.36.109.108 1 1 1011 20250722075459
+43.135.183.82 1 1 2132 20250729000549
+43.153.79.218 1 1 7523 20250730020514
+43.135.182.95 2 2 9655 20250730180500
+52.24.104.213 1 1 7523 20250731141215
+43.130.139.136 1 1 7523 20250728131045
+176.53.222.192 1 1 7523 20250731125921
+49.51.203.164 1 1 2132 20250731000519
+43.153.47.201 1 1 7523 20250728120339
+175.6.217.4 2 2 15046 20250728124817
+149.57.180.83 1 1 7523 20250728190459
+43.130.32.245 3 3 22569 20250729120423
+34.209.217.224 1 1 2132 20250728090945
+43.131.26.226 1 1 2132 20250729001646
+43.130.116.87 1 1 7523 20250731020654
+54.172.244.157 1 1 8205 20250728150513
+170.106.107.87 1 1 7523 20250730020406
+205.169.39.149 2 2 9655 20250729024239
+170.106.113.159 2 2 15046 20250730010036
+182.40.104.255 3 3 17178 20250730085219
+43.130.14.245 1 1 7523 20250730000511
+118.195.153.213 3 3 6396 20250731193151
+43.135.135.57 1 1 7523 20250729131315
+52.21.90.90 1 1 1011 20250722032131
+43.153.62.161 1 1 7523 20250731224246
+23.27.145.28 1 1 7523 20250728124033
+176.53.223.74 1 1 7523 20250729100340
+182.43.70.143 2 2 4264 20250729172133
+43.130.3.120 1 1 7523 20250731020335
+152.42.184.245 1 1 2814 20250722144705
+170.106.160.90 1 1 7523 20250728083545
+4.43.184.113 2 2 9655 20250729220945
+110.166.71.39 2 2 4264 20250731003303
+212.227.221.139 2 2 2858 20250721224703
+154.210.100.170 1 1 1011 20250722053613
+43.153.71.12 1 1 2132 20250729141301
+43.131.253.14 1 1 7523 20250722150310
+93.158.90.31 1 1 7523 20250729101749
+104.232.195.249 1 1 1011 20250722052957
+162.62.213.165 3 3 22569 20250730112256
+43.173.1.57 1 1 7523 20250728035923
+43.166.255.122 1 1 7523 20250731161054
+170.106.180.153 1 1 7523 20250731100839
+43.166.132.142 1 1 7523 20250727201130
+153.0.120.140 1 1 2132 20250730061223
+43.166.128.187 1 1 2132 20250729063843
+43.157.156.190 1 1 7523 20250728092116
+34.83.30.127 1 1 1501 20250731013405
+43.153.96.233 1 1 7523 20250728180529
+205.169.39.48 1 1 2132 20250729025758
+34.122.147.229 1 1 7523 20250729024657
+185.177.72.16 2 4 99819 20250722063009
+49.51.233.46 1 1 7523 20250727180628
+43.165.67.57 1 1 7523 20250731020511
+34.57.81.235 1 1 1011 20250722052113
+23.111.114.116 1 1 2132 20250727182427
+43.135.185.59 2 2 9655 20250730000711
+185.255.164.0 2 2 9655 20250730021422
+37.19.198.142 1 1 7523 20250730062039
+35.222.168.207 1 1 1011 20250722065724
+14.215.163.132 1 1 2132 20250727182259
+44.202.227.66 1 3 107750 20250722052358
+35.89.223.5 2 2 2022 20250722030434
+43.156.168.214 1 1 7523 20250730010113
+43.157.175.122 1 1 7523 20250731024634
+35.90.231.81 1 1 7523 20250730130343
+43.159.149.56 1 1 7523 20250728010507
+3.68.147.29 1 1 1011 20250722043024
+49.51.72.76 1 1 7523 20250730163408
+213.209.143.116 1 1 7523 20250730210442
+217.160.152.8 2 4 108761 20250722081154
+43.153.87.54 1 1 2132 20250731073049
+43.135.140.225 2 2 9655 20250730150421
+176.53.216.113 1 1 2132 20250730063226
+43.157.168.43 1 1 7523 20250729131554
+23.27.145.138 1 1 7523 20250730115054
+87.236.176.243 1 1 7523 20250731053233
+162.62.213.187 2 2 15046 20250729180357
+146.112.163.42 1 1 7523 20250728020005
+43.167.239.66 2 2 9655 20250730005048
+93.158.90.37 1 1 1011 20250722062221
+185.177.72.115 1 1 2132 20250727184804
+43.152.72.247 2 2 15046 20250731072434
+3.90.189.134 1 1 1598 20250722024748
+101.33.80.42 1 1 7523 20250731121810
+43.135.172.89 1 1 7523 20250729120405
+124.221.245.78 2 2 9655 20250729202252
+43.167.232.38 2 2 9655 20250731163456
+132.232.144.200 2 2 15046 20250730053746
+43.157.170.126 1 1 7523 20250730091544
+51.159.14.95 2 2 9655 20250728071742
+185.177.72.113 1 1 2132 20250730040754
+124.156.225.181 1 1 7523 20250730115242
+43.135.182.43 2 2 15046 20250729020256
+43.157.22.109 2 2 15046 20250728204932
+34.116.160.110 1 1 7523 20250729025137
+154.223.139.64 1 1 2132 20250731095013
+162.62.132.25 2 2 8534 20250727211337
+170.106.187.106 2 2 15046 20250731073551
+141.95.175.112 1 3 107750 20250722030555
+52.55.247.251 1 1 1011 20250722033215
+217.160.152.34 2 4 108761 20250722082456
+43.165.189.206 1 1 7523 20250728144019
+43.130.16.212 2 2 9655 20250730064900
+195.201.235.93 1 1 1011 20250722083325
+43.153.48.240 1 1 2132 20250730020341
+54.166.242.167 2 4 109348 20250722042551
+43.167.241.46 1 1 2132 20250728180321
+43.153.113.127 1 1 7523 20250729194246
+43.130.12.43 1 1 7523 20250728000515
+43.130.228.73 3 3 22569 20250729010359
+192.197.201.114 1 1 2132 20250729000822
+101.33.55.204 2 2 15046 20250731180606
+43.157.150.69 1 1 7523 20250731120428
+212.56.53.127 3 3 11787 20250730172742
+95.177.180.85 1 1 7523 20250729083223
+119.13.212.243 1 1 7523 20250729011131
+43.135.133.194 1 1 7523 20250729000522
+43.164.195.17 1 1 7523 20250730135651
+124.156.179.141 1 1 2132 20250730060925
+43.166.134.114 1 1 7523 20250729114823
+49.51.196.42 1 1 7523 20250730150524
+157.180.29.204 1 1 1429 20250721230643
+170.106.192.208 1 1 7523 20250729091416
+129.211.215.233 2 2 9655 20250728160916
+43.130.9.111 2 2 15046 20250730211105
+77.11.164.1 2 2 9726 20250727174042
+51.159.100.248 1 1 7523 20250722145444
+34.123.12.224 1 1 303 20250722012209
+170.106.163.48 1 1 7523 20250727203653
+43.159.128.247 1 1 2132 20250729150409
+43.130.110.130 1 1 7523 20250728144301
+43.158.91.71 1 1 2132 20250730180417
+93.158.90.43 1 1 7523 20250731080714
+43.130.111.40 1 1 7523 20250729165204
+43.166.238.12 1 1 7523 20250730165440
+216.251.130.76 2 2 9655 20250728155242
+93.158.90.40 1 1 1011 20250722065348
+156.248.54.224 1 1 1011 20250722063834
+43.159.148.221 1 1 2132 20250729000552
+43.164.196.57 1 1 7523 20250730131806
+45.15.238.245 1 1 7523 20250729153712
+170.106.179.68 1 1 7523 20250729020312
+212.70.3.201 1 1 7523 20250730021414
+146.70.205.190 1 1 2814 20250730060240
+205.169.39.66 2 2 9655 20250729022751
+170.106.72.178 2 2 15046 20250731000525
+46.101.80.192 2 2 9723 20250731034425
+43.157.148.38 2 2 15046 20250730065140
+156.146.36.196 1 1 7523 20250727203251
+157.173.122.176 2 2 9655 20250731133458
+3.111.51.103 1 1 7523 20250730154206
+34.78.49.210 1 1 2132 20250729011141
+170.106.180.246 1 1 7523 20250730104814
+43.157.158.178 1 1 7523 20250728032120
+82.156.68.74 4 4 24701 20250729140217
+161.35.42.106 1 1 2132 20250730064832
+54.218.65.247 1 1 7523 20250728141524
+45.152.215.235 1 1 7523 20250728153336
+43.157.38.131 1 1 7523 20250728031202
+57.128.80.174 1 3 107750 20250722053639
+60.188.57.0 2 2 9655 20250729042551
+43.135.211.148 1 1 2132 20250730154450
+43.166.1.243 2 2 15046 20250729081153
+43.156.156.96 1 1 7523 20250728122424
+104.194.200.175 1 1 1011 20250722055754
+104.232.194.247 1 1 1011 20250722054121
+176.53.220.199 2 2 4264 20250730063229
+43.133.69.37 1 1 7523 20250730215217
+124.226.222.66 3 3 11787 20250730212956
+34.87.57.243 1 1 7523 20250728203325
+43.135.148.92 1 1 7523 20250729120336
+36.41.75.167 3 3 11787 20250731033351
+170.106.84.136 1 1 2132 20250728020444
+111.7.96.164 1 1 7523 20250729000817
+193.56.22.61 1 1 2132 20250728001324
+119.28.177.175 1 1 7523 20250728224158
+45.90.60.154 1 1 7523 20250728054246
+66.56.82.25 1 1 7523 20250729155634
+34.123.170.104 1 1 7523 20250729025931
+18.215.179.134 2 4 109348 20250722025929
+104.252.191.60 2 3 97817 20250722083144
+94.191.43.82 3 3 6396 20250731095643
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 7
+20250721 4 4 5716 3
+20250722 130 168 2214373 62
+20250727 23 23 124581 21
+20250728 96 96 570049 76
+20250729 99 99 519243 77
+20250730 74 74 409303 67
+20250731 69 69 373700 57
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+30s-2mn 3
+1h+ 2
+5mn-15mn 6
+15mn-30mn 3
+2mn-5mn 3
+0s-30s 346
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 2
+/ 483 2215711 363 361
+/salon/wechseln 12 37198 0 2
+END_SIDER
+
+# Payload Range - Payload Frequency
+BEGIN_FILESIZE 7
+500-1K 162
+1K-2K 61
+0-44 111
+5K+ 3859
+44-100 11
+2K-5K 351
+100-500 27
+END_FILESIZE

@@ -1,0 +1,1 @@
+Inhalt aus app/Http/Controllers hier eingefügt (simuliert für ZIP-Gesamtpaket).

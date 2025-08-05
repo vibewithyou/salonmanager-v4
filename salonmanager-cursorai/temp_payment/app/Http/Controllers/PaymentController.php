@@ -1,0 +1,1 @@
+<?php // PaymentController: Stripe Session mit Klarna, Apple Pay aktivieren ?>

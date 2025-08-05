@@ -1,0 +1,1 @@
+var stripe = Stripe('pk_test_xxx');document.getElementById('pay').onclick = function(){stripe.redirectToCheckout({sessionId: 'sess_xyz'});};

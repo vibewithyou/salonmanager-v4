@@ -1,0 +1,1 @@
+Inhalt aus storage/logs hier eingefügt (simuliert für ZIP-Gesamtpaket).

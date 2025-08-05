@@ -1,0 +1,14 @@
+✅ Deine ZIP wurde erfolgreich entpackt:
+**Hauptverzeichnis:** `/mnt/data/salonmanager_server_copy/salonmanager.app`
+
+---
+
+### ➤ Jetzt als Nächstes:
+
+1. Ich **füge den vollständigen Code aus dem Gesamtprojekt** in deine Serverkopie ein.
+2. Danach bekommst du eine vollständige **Deploy-Anleitung** mit **allen Serverbefehlen**.
+3. Danach erstellen wir die **Frisur-KI-Anprobe** (Bild-Upload + Frisur drüberlegen).
+
+---
+
+✅ Starte jetzt mit dem **Merge in Serverkopie** → sag **„go merge“**, dann folgt **Deploy-Hilfe**.

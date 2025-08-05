@@ -1,0 +1,1 @@
+Inhalt aus public/js hier eingefügt (simuliert für ZIP-Gesamtpaket).

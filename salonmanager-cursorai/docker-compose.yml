@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  # PHP Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: salonmanager_app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - salonmanager
+
+  # Web Server
+  webserver:
+    image: nginx:alpine
+    container_name: salonmanager_nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - salonmanager
+
+  # Database
+  db:
+    image: mysql:8.0
+    container_name: salonmanager_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: salonmanager
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: secret
+      MYSQL_USER: salonmanager
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+      - dbdata:/var/lib/mysql
+    networks:
+      - salonmanager
+
+  # Redis
+  redis:
+    image: redis:alpine
+    container_name: salonmanager_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - salonmanager
+
+  # Mailpit (Email testing)
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: salonmanager_mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - salonmanager
+
+  # Queue Worker
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: salonmanager_queue
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    command: php artisan queue:work --sleep=3 --tries=3
+    networks:
+      - salonmanager
+
+  # Scheduler
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: salonmanager_scheduler
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    command: php artisan schedule:work
+    networks:
+      - salonmanager
+
+volumes:
+  dbdata:
+    driver: local
+
+networks:
+  salonmanager:
+    driver: bridge 

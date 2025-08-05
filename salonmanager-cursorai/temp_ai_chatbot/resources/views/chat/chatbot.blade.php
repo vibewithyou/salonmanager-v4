@@ -1,0 +1,1 @@
+<h1>Chatbot</h1><div id='chatlog'></div><input id='chatinput'><button onclick='sendMsg()'>Senden</button><script>function sendMsg(){/* AJAX an ChatbotController */}</script>

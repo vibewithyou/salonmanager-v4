@@ -1,0 +1,1 @@
+Inhalt aus public/docs hier eingefügt (simuliert für ZIP-Gesamtpaket).

@@ -1,0 +1,39 @@
+✅ Alles klar! Du meinst die **23 Kategorien**, die ich analysiert habe. Wir machen daraus jetzt deine **offizielle Master-Roadmap**, exakt in dieser Reihenfolge und mit den nötigen Schritten pro Kategorie.
+
+---
+
+## 🚀 **Master-Roadmap: 23 Verbesserungs-Kategorien**
+
+| Nr. | Kategorie                | Was genau verbessert/ergänzt wird                                       |
+| --: | ------------------------ | ----------------------------------------------------------------------- |
+|  1. | 📍 Karte & Suche         | Live freie Termine + Filter-Optimierung                                 |
+|  2. | 📅 Terminlogik           | Kalender-UX, Verfügbarkeiten je Stylist visualisieren                   |
+|  3. | 💳 Zahlungssysteme       | Klarna, SEPA, Apple Pay – Live/Sandbox-Anzeige, rechtl. SEPA-Zustimmung |
+|  4. | 📦 Lager & Shop          | QR-Code-Etiketten, Lagerwarnungen, Produktimport                        |
+|  5. | 🧾 Export/Finanzen       | Umsatzsteuer-Auswahl, DATEV/CSV Export, Monatsübersicht                 |
+|  6. | 📲 PWA/App               | PWA-Vollbild-Modus, Buttongröße, Native App-Vorbereitung                |
+|  7. | 🧠 KI-Module             | Bessere Terminvorschläge, KI-Qualität skalieren                         |
+|  8. | 💬 Chat & CRM            | Dateiupload im Chat, Notizen-Historie, Suche                            |
+|  9. | 🧩 Adminsteuerung        | Massenaktionen, Mehrfach-Export, Statusübersicht                        |
+| 10. | ⚖️ DSGVO                 | Datenschutzerklärung + AGB Generator je Salon                           |
+| 11. | 📝 Impressumspflicht     | Impressum-Generator je Salon, Vorlage automatisch                       |
+| 12. | ⚖️ Zahlung & SEPA        | SEPA-Zustimmung, AGB-Bestätigung, rechtlich korrekt                     |
+| 13. | 🧾 Rechnungen            | Steuer-ID je Salon, Umsatzsteueroption in Rechnung                      |
+| 14. | 💾 Backups / Logs        | Backupziel wählen, Logs einsehen/exportieren                            |
+| 15. | 🧭 Startseite/Navigation | UX flüssiger, animierte Übergänge, Menüverhalten optimieren             |
+| 16. | 🎨 Farben / Editor       | Live-Vorschau Design-Editor, direkte Änderung sichtbar                  |
+| 17. | 📱 Mobile Ansicht        | Verbesserte Usability, Touch-Funktionen optimieren                      |
+| 18. | 🖼️ Icons / UX Design    | Moderne Icons (Lucide), UI-Komponenten verbessern                       |
+| 19. | 🧑‍💼 Kundenbereich      | Fortschrittsanzeige, Treuelevel, Lieblingsstylisten                     |
+| 20. | 💰 Monetarisierung       | Abomodell je Salon, Abrechnung je Buchung                               |
+| 21. | 📢 Marketing             | Newslettermodul, Aktions-Kampagnen mit Planer                           |
+| 22. | 🗓️ Organisation         | iCal/Google-Kalender-Sync, Dienstplanimport                             |
+| 23. | 🔐 Sicherheit & Business | 2FA, Loginlogs, IP-Schutz, Umsatz live sehen, Exporterweiterung         |
+
+---
+
+# ➤ Wir starten mit **Punkt 1: Karte & Suche verbessern**
+
+(Mit Live freie Termine, besserem Filter, Marker-Farben)
+
+👉 Sag „go“, ich setze echten Code + ZIP.
