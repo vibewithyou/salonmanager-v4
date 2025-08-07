@@ -135,12 +135,11 @@ class SalonManagerAPITester:
         success, response = self.make_request('POST', '/api/auth/register', owner_data, 
                                             expected_status=200, auth_required=False)
         if success:
-            # Login as salon owner using form data
-            url = f"{self.base_url}/api/auth/login"
-            login_data = {"email": test_email, "password": "OwnerPassword123!"}
+            # Login as salon owner using query parameters
+            url = f"{self.base_url}/api/auth/login?email={test_email}&password=OwnerPassword123!"
             
             try:
-                response = self.session.post(url, data=login_data)  # Use data instead of json
+                response = self.session.post(url)
                 if response.status_code == 200:
                     data = response.json()
                     self.owner_token = data.get('access_token')
