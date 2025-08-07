@@ -5,6 +5,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   HeartIcon,
+  ScissorsIcon,
 } from '@heroicons/react/24/outline';
 import {
   FacebookIcon,
@@ -46,70 +47,73 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'Facebook',
-      href: 'https://facebook.com/salonmanager',
+      href: 'https://facebook.com/barbermanager',
       icon: FacebookIcon,
     },
     {
       name: 'Instagram',
-      href: 'https://instagram.com/salonmanager',
+      href: 'https://instagram.com/barbermanager',
       icon: InstagramIcon,
     },
     {
       name: 'Twitter',
-      href: 'https://twitter.com/salonmanager',
+      href: 'https://twitter.com/barbermanager',
       icon: TwitterIcon,
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/salonmanager',
+      href: 'https://linkedin.com/company/barbermanager',
       icon: LinkedInIcon,
     },
   ];
 
   return (
-    <footer className="bg-secondary-900 text-secondary-300">
+    <footer className="bg-black text-gray-300 border-t border-gray-800">
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand section */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+            <Link to="/" className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg">
+                <ScissorsIcon className="w-6 h-6 text-black" />
               </div>
-              <span className="text-white font-bold text-xl">SalonManager</span>
+              <div className="flex flex-col">
+                <span className="text-white font-bold text-xl tracking-tight">BarberManager</span>
+                <span className="text-yellow-500 text-xs font-medium uppercase tracking-widest">Premium</span>
+              </div>
             </Link>
             
-            <p className="text-secondary-400 mb-6 max-w-md">
-              Die moderne Lösung für Salons und Kunden. Vereinfache Terminbuchungen, 
-              verwalte dein Business und biete deinen Kunden die beste Erfahrung.
+            <p className="text-gray-400 mb-8 max-w-md text-lg">
+              Die moderne Lösung für Premium Barbershops und anspruchsvolle Kunden. 
+              Vereinfache Terminbuchungen und biete erstklassigen Service.
             </p>
 
-            <div className="space-y-2">
+            <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPinIcon className="w-5 h-5 text-secondary-500" />
-                <span className="text-sm">Musterstraße 123, 12345 Berlin</span>
+                <MapPinIcon className="w-5 h-5 text-yellow-500" />
+                <span className="text-gray-300">Musterstraße 123, 12345 Berlin</span>
               </div>
               <div className="flex items-center space-x-3">
-                <PhoneIcon className="w-5 h-5 text-secondary-500" />
-                <span className="text-sm">+49 (0) 30 12345678</span>
+                <PhoneIcon className="w-5 h-5 text-yellow-500" />
+                <span className="text-gray-300">+49 (0) 30 12345678</span>
               </div>
               <div className="flex items-center space-x-3">
-                <EnvelopeIcon className="w-5 h-5 text-secondary-500" />
-                <span className="text-sm">info@salonmanager.de</span>
+                <EnvelopeIcon className="w-5 h-5 text-yellow-500" />
+                <span className="text-gray-300">info@barbermanager.de</span>
               </div>
             </div>
           </div>
 
           {/* Links sections */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Unternehmen</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Unternehmen</h3>
+            <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
+                    className="text-gray-400 hover:text-yellow-500 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
@@ -119,13 +123,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Services</h3>
+            <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
+                    className="text-gray-400 hover:text-yellow-500 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
@@ -135,13 +139,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Support</h3>
+            <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
+                    className="text-gray-400 hover:text-yellow-500 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
@@ -151,13 +155,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Rechtliches</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Rechtliches</h3>
+            <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm hover:text-white transition-colors duration-200"
+                    className="text-gray-400 hover:text-yellow-500 transition-colors duration-200 font-medium"
                   >
                     {link.name}
                   </Link>
@@ -168,15 +172,15 @@ const Footer = () => {
         </div>
 
         {/* Newsletter signup */}
-        <div className="mt-12 pt-8 border-t border-secondary-800">
+        <div className="mt-16 pt-12 border-t border-gray-800">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-            <div className="mb-6 lg:mb-0">
-              <h3 className="text-white font-semibold text-lg mb-2">
-                Newsletter abonnieren
+            <div className="mb-8 lg:mb-0">
+              <h3 className="text-white font-bold text-2xl mb-3">
+                Newsletter <span className="text-gradient-gold">abonnieren</span>
               </h3>
-              <p className="text-secondary-400 max-w-md">
-                Bleibe auf dem Laufenden über neue Features, Tipps und 
-                exklusive Angebote für Salons.
+              <p className="text-gray-400 max-w-md text-lg">
+                Bleibe auf dem Laufenden über neue Features, Barbershop-Tipps und 
+                exklusive Angebote für Premium-Services.
               </p>
             </div>
             
@@ -185,13 +189,13 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Deine E-Mail-Adresse"
-                  className="px-4 py-2 bg-secondary-800 border border-secondary-700 rounded-lg text-white placeholder-secondary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent w-64"
+                  className="px-6 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent w-80"
                 />
                 <button
                   type="submit"
-                  className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200"
+                  className="btn-primary px-8 py-4 rounded-lg font-bold"
                 >
-                  Abonnieren
+                  ABONNIEREN
                 </button>
               </form>
             </div>
@@ -200,53 +204,53 @@ const Footer = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="bg-secondary-800 border-t border-secondary-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="bg-gray-900 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             {/* Copyright */}
-            <div className="flex items-center space-x-1 mb-4 md:mb-0">
-              <span className="text-sm text-secondary-400">
-                © {currentYear} SalonManager. Alle Rechte vorbehalten.
+            <div className="flex items-center space-x-2 mb-6 md:mb-0">
+              <span className="text-gray-400">
+                © {currentYear} BarberManager. Alle Rechte vorbehalten.
               </span>
-              <span className="text-sm text-secondary-400">
+              <span className="text-gray-400">
                 Made with
               </span>
               <HeartIcon className="w-4 h-4 text-red-500" />
-              <span className="text-sm text-secondary-400">
+              <span className="text-gray-400">
                 in Deutschland
               </span>
             </div>
 
             {/* Social links */}
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-secondary-400">Folge uns:</span>
+            <div className="flex items-center space-x-6">
+              <span className="text-gray-400 font-medium">Folge uns:</span>
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-yellow-500 transition-colors duration-200 transform hover:scale-110"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-6 h-6" />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Language selector */}
-          <div className="mt-4 pt-4 border-t border-secondary-700">
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-secondary-400">Sprache:</span>
-              <select className="bg-secondary-700 border border-secondary-600 rounded px-2 py-1 text-sm text-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500">
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="tr">Türkçe</option>
-                <option value="ru">Русский</option>
-                <option value="ar">العربية</option>
+          <div className="mt-6 pt-6 border-t border-gray-800">
+            <div className="flex items-center space-x-3">
+              <span className="text-gray-400 font-medium">Sprache:</span>
+              <select className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="tr">🇹🇷 Türkçe</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="ar">🇸🇦 العربية</option>
               </select>
             </div>
           </div>
