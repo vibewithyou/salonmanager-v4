@@ -139,14 +139,18 @@ class SalonManagerAPITester:
         success, response = self.make_request('POST', '/api/auth/register', owner_data, 
                                             expected_status=200, auth_required=False)
         if success:
-            # Login as salon owner
+            # Login as salon owner using form data
+            url = f"{self.base_url}/api/auth/login"
             login_data = {"email": test_email, "password": "OwnerPassword123!"}
-            success, response = self.make_request('POST', '/api/auth/login', login_data, 
-                                                expected_status=200, auth_required=False)
-            if success and response:
-                data = response.json()
-                self.owner_token = data.get('access_token')
-                return self.log_test("Create Salon Owner", True, "Owner created and logged in")
+            
+            try:
+                response = self.session.post(url, data=login_data)  # Use data instead of json
+                if response.status_code == 200:
+                    data = response.json()
+                    self.owner_token = data.get('access_token')
+                    return self.log_test("Create Salon Owner", True, "Owner created and logged in")
+            except Exception as e:
+                pass
         
         return self.log_test("Create Salon Owner", False, "Failed to create salon owner")
 
