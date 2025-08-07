@@ -330,15 +330,18 @@ class SalonManagerAPITester:
         success, response = self.make_request('POST', '/api/ai/appointment-suggestions', ai_data)
         if success and response:
             data = response.json()
+            if data.get('message') == 'AI features not available':
+                return self.log_test("AI Suggestions", True, "AI features disabled (no OpenAI key)")
             has_suggestions = 'suggestions' in data
             return self.log_test("AI Suggestions", has_suggestions, f"Suggestions available: {has_suggestions}")
         else:
-            # Check if it's an OpenAI configuration issue
-            if response and response.status_code == 200:
-                data = response.json()
-                if data.get('message') == 'AI features not available':
-                    return self.log_test("AI Suggestions", True, "AI features disabled (no OpenAI key)")
-            return self.log_test("AI Suggestions", False, "Failed to get AI suggestions")
+            if response:
+                try:
+                    error_detail = response.json().get('detail', f'HTTP {response.status_code}')
+                    return self.log_test("AI Suggestions", False, f"Error: {error_detail}")
+                except:
+                    return self.log_test("AI Suggestions", False, f"HTTP {response.status_code}")
+            return self.log_test("AI Suggestions", False, "No response")
 
     def test_qr_code(self):
         """Test QR code generation"""
