@@ -19,6 +19,13 @@ import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
 import AppointmentsPage from './pages/AppointmentsPage';
 
+// Additional Pages
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import FeedbackPage from './pages/FeedbackPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+
 // Services
 import * as authService from './services/authService';
 
@@ -47,7 +54,7 @@ export const useTheme = () => {
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   useEffect(() => {
     // Check for existing token and validate user
@@ -132,7 +139,7 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-secondary-50 dark:bg-secondary-900">
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
         <LoadingSpinner size="lg" />
       </div>
     );
@@ -142,7 +149,7 @@ function App() {
     <AuthContext.Provider value={authContextValue}>
       <ThemeContext.Provider value={themeContextValue}>
         <Router>
-          <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900 transition-colors duration-200">
+          <div className="min-h-screen bg-gray-900 transition-colors duration-200">
             <Header />
             
             <main className="flex-1">
@@ -152,6 +159,15 @@ function App() {
                 <Route path="/salons" element={<SalonsPage />} />
                 <Route path="/salon/:slug" element={<SalonDetailPage />} />
                 <Route path="/booking/:salonId" element={<BookingPage />} />
+                
+                {/* Info Pages */}
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/feedback" element={<FeedbackPage />} />
+                
+                {/* Legal Pages */}
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
                 
                 {/* Auth Routes */}
                 <Route 
