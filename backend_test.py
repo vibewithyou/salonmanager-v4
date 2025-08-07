@@ -642,6 +642,8 @@ class SalonManagerAPITester:
         result2 = self.log_test("400 Error Handling", bad_request_handled, "Invalid request returns 400")
         
         return result1 and result2
+
+    def run_all_tests(self):
         """Run all API tests"""
         print("🚀 Starting SalonManager Backend API Tests")
         print("=" * 50)
