@@ -445,12 +445,26 @@ async def get_salon_stylists(salon_id: str):
     # Get user details for each stylist
     for stylist in stylists:
         stylist["id"] = str(stylist["_id"])
-        user = await db.users.find_one({"_id": ObjectId(stylist["user_id"])})
-        if user:
+        # Remove ObjectId to avoid serialization issues
+        del stylist["_id"]
+        
+        try:
+            if ObjectId.is_valid(stylist["user_id"]):
+                user = await db.users.find_one({"id": stylist["user_id"]})
+            else:
+                user = await db.users.find_one({"id": stylist["user_id"]})
+                
+            if user:
+                stylist["user"] = {
+                    "first_name": user["first_name"],
+                    "last_name": user["last_name"],
+                    "avatar_url": user.get("avatar_url")
+                }
+        except:
             stylist["user"] = {
-                "first_name": user["first_name"],
-                "last_name": user["last_name"],
-                "avatar_url": user.get("avatar_url")
+                "first_name": "Unknown",
+                "last_name": "User",
+                "avatar_url": None
             }
     
     return stylists
