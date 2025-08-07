@@ -475,7 +475,7 @@ async def get_salon_services(salon_id: str):
     return services
 
 @app.post("/api/services", response_model=ServiceResponse)
-async def create_service(service: ServiceCreate, current_user: dict = Depends(get_current_user)):
+async def create_service(service: ServiceBase, current_user: dict = Depends(get_current_user)):
     service_data = service.dict()
     service_data["id"] = str(uuid.uuid4())
     service_data["created_at"] = datetime.utcnow()
