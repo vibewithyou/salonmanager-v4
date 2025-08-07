@@ -1,0 +1,82 @@
+{
+  "short_name": "SalonManager",
+  "name": "SalonManager - Salon Verwaltung & Terminbuchung",
+  "description": "Die moderne Lösung für Salon-Verwaltung und Terminbuchung",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#d946ef",
+  "background_color": "#f8fafc",
+  "categories": ["business", "lifestyle", "productivity"],
+  "lang": "de",
+  "dir": "ltr",
+  "scope": "/",
+  "id": "salonmanager-app",
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "320x568",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png", 
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Neuen Termin buchen",
+      "short_name": "Buchen",
+      "description": "Schnell einen neuen Termin buchen",
+      "url": "/salons",
+      "icons": [
+        {
+          "src": "calendar-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Meine Termine",
+      "short_name": "Termine", 
+      "description": "Ihre aktuellen Termine ansehen",
+      "url": "/appointments",
+      "icons": [
+        {
+          "src": "appointments-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Ihr persönliches Dashboard",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "dashboard-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}
