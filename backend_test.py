@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 import uuid
 
 class SalonManagerAPITester:
-    def __init__(self, base_url="http://localhost:8001"):
+    def __init__(self, base_url="https://f1c495e8-42a6-46dc-96f1-af93bdb4684e.preview.emergentagent.com"):
         self.base_url = base_url
         self.token = None
         self.user_id = None
