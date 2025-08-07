@@ -797,6 +797,8 @@ async def get_voucher(code: str):
         raise HTTPException(status_code=400, detail="Voucher usage limit reached")
     
     voucher["id"] = str(voucher["_id"])
+    # Remove ObjectId to avoid serialization issues
+    del voucher["_id"]
     return voucher
 
 # AI endpoints
