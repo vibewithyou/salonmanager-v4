@@ -305,7 +305,12 @@ class SalonManagerAPITester:
             data = response.json()
             has_client_secret = 'client_secret' in data
             return self.log_test("Payment Intent", has_client_secret, f"Client secret: {bool(has_client_secret)}")
-        return self.log_test("Payment Intent", False, "Failed to create payment intent")
+        else:
+            # Check if it's a Stripe configuration issue
+            if response and response.status_code == 400:
+                error_detail = response.json().get('detail', 'Unknown error')
+                return self.log_test("Payment Intent", False, f"Stripe config issue: {error_detail}")
+            return self.log_test("Payment Intent", False, "Failed to create payment intent")
 
     def test_ai_suggestions(self):
         """Test AI appointment suggestions"""
