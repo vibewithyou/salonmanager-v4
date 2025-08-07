@@ -93,15 +93,11 @@ class SalonManagerAPITester:
         if not hasattr(self, 'test_email'):
             return self.log_test("User Login", False, "No test user to login with")
             
-        # Login endpoint expects form data, not JSON
-        url = f"{self.base_url}/api/auth/login"
-        login_data = {
-            "email": self.test_email,
-            "password": self.test_password
-        }
+        # Login endpoint expects query parameters
+        url = f"{self.base_url}/api/auth/login?email={self.test_email}&password={self.test_password}"
         
         try:
-            response = self.session.post(url, data=login_data)  # Use data instead of json
+            response = self.session.post(url)
             success = response.status_code == 200
             
             if success and response:
