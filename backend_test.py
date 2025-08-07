@@ -93,19 +93,26 @@ class SalonManagerAPITester:
         if not hasattr(self, 'test_email'):
             return self.log_test("User Login", False, "No test user to login with")
             
+        # Login endpoint expects form data, not JSON
+        url = f"{self.base_url}/api/auth/login"
         login_data = {
             "email": self.test_email,
             "password": self.test_password
         }
         
-        success, response = self.make_request('POST', '/api/auth/login', login_data, 
-                                            expected_status=200, auth_required=False)
-        if success and response:
-            data = response.json()
-            self.token = data.get('access_token')
-            self.user_id = data.get('user', {}).get('id')
-            return self.log_test("User Login", True, f"Token received: {bool(self.token)}")
-        return self.log_test("User Login", False, "Login failed")
+        try:
+            response = self.session.post(url, data=login_data)  # Use data instead of json
+            success = response.status_code == 200
+            
+            if success and response:
+                data = response.json()
+                self.token = data.get('access_token')
+                self.user_id = data.get('user', {}).get('id')
+                return self.log_test("User Login", True, f"Token received: {bool(self.token)}")
+            else:
+                return self.log_test("User Login", False, f"Login failed with status {response.status_code}")
+        except Exception as e:
+            return self.log_test("User Login", False, f"Login error: {str(e)}")
 
     def test_get_current_user(self):
         """Test get current user profile"""
