@@ -26,6 +26,14 @@ import FeedbackPage from './pages/FeedbackPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 
+// New Feature Pages
+import SalonEditorPage from './pages/SalonEditorPage';
+import LoyaltyPage from './pages/LoyaltyPage';
+import ChatPage from './pages/ChatPage';
+import GalleryPage from './pages/GalleryPage';
+import AIFeaturesPage from './pages/AIFeaturesPage';
+import AdminDashboard from './pages/AdminDashboard';
+
 // Services
 import * as authService from './services/authService';
 
@@ -159,6 +167,8 @@ function App() {
                 <Route path="/salons" element={<SalonsPage />} />
                 <Route path="/salon/:slug" element={<SalonDetailPage />} />
                 <Route path="/booking/:salonId" element={<BookingPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/ai-features" element={<AIFeaturesPage />} />
                 
                 {/* Info Pages */}
                 <Route path="/about" element={<AboutPage />} />
@@ -191,6 +201,26 @@ function App() {
                 <Route 
                   path="/appointments" 
                   element={user ? <AppointmentsPage /> : <Navigate to="/login" />} 
+                />
+                <Route 
+                  path="/loyalty" 
+                  element={user ? <LoyaltyPage /> : <Navigate to="/login" />} 
+                />
+                <Route 
+                  path="/chat/:appointmentId" 
+                  element={user ? <ChatPage /> : <Navigate to="/login" />} 
+                />
+                
+                {/* Salon Owner Routes */}
+                <Route 
+                  path="/salon-editor/:salonId" 
+                  element={user && (user.role === 'salon_owner' || user.role === 'admin') ? <SalonEditorPage /> : <Navigate to="/dashboard" />} 
+                />
+                
+                {/* Admin Routes */}
+                <Route 
+                  path="/admin" 
+                  element={user && user.role === 'admin' ? <AdminDashboard /> : <Navigate to="/dashboard" />} 
                 />
                 
                 {/* 404 Route */}
