@@ -755,6 +755,8 @@ async def get_salon_products(salon_id: str):
     products = await db.products.find({"salon_id": salon_id, "is_active": True}).to_list(length=None)
     for product in products:
         product["id"] = str(product["_id"])
+        # Remove ObjectId to avoid serialization issues
+        del product["_id"]
     return products
 
 @app.post("/api/products", response_model=ProductResponse)
