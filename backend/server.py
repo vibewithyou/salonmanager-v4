@@ -717,11 +717,20 @@ async def get_salon_reviews(salon_id: str, skip: int = 0, limit: int = 20):
     
     for review in reviews:
         review["id"] = str(review["_id"])
+        # Remove ObjectId to avoid serialization issues
+        del review["_id"]
         # Get customer info
-        customer = await db.users.find_one({"_id": ObjectId(review["customer_id"])})
-        if customer and not review["is_anonymous"]:
-            review["customer_name"] = f"{customer['first_name']} {customer['last_name'][0]}."
-        else:
+        try:
+            if ObjectId.is_valid(review["customer_id"]):
+                customer = await db.users.find_one({"id": review["customer_id"]})
+            else:
+                customer = await db.users.find_one({"id": review["customer_id"]})
+            
+            if customer and not review["is_anonymous"]:
+                review["customer_name"] = f"{customer['first_name']} {customer['last_name'][0]}."
+            else:
+                review["customer_name"] = "Anonymer Kunde"
+        except:
             review["customer_name"] = "Anonymer Kunde"
     
     return reviews
