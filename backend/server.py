@@ -359,6 +359,7 @@ async def login(email: EmailStr, password: str):
     access_token = create_access_token(data={"sub": user["email"]})
     user["id"] = str(user["_id"])
     del user["password"]
+    del user["_id"]  # Remove ObjectId to avoid serialization issues
     
     return {
         "access_token": access_token,
