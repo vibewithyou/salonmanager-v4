@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Pages
+// Pages  
 import HomePage from './pages/HomePage';
 import SalonsPage from './pages/SalonsPage';
 import SalonDetailPage from './pages/SalonDetailPage';
