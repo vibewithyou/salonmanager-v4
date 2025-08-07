@@ -33,16 +33,8 @@ api.interceptors.response.use(
 
 export const login = async (email, password) => {
   try {
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('password', password);
-    
-    const response = await axios.post(`${API_BASE_URL}/api/auth/login`, formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
-    
+    // Backend expects query parameters for login
+    const response = await axios.post(`${API_BASE_URL}/api/auth/login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
     return response.data;
   } catch (error) {
     throw error.response?.data || error;
