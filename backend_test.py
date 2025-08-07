@@ -368,7 +368,280 @@ class SalonManagerAPITester:
         self.token = original_token
         return result
 
-    def run_all_tests(self):
+    def test_create_review(self):
+        """Test creating a review"""
+        if not self.salon_id or not self.token:
+            return self.log_test("Create Review", False, "Missing salon ID or token")
+            
+        review_data = {
+            "rating": 5,
+            "comment": "Excellent service! Very professional staff.",
+            "salon_id": self.salon_id,
+            "is_anonymous": False
+        }
+        
+        success, response = self.make_request('POST', '/api/reviews', review_data)
+        if success and response:
+            data = response.json()
+            self.review_id = data.get('id')
+            return self.log_test("Create Review", True, f"Review ID: {self.review_id}")
+        return self.log_test("Create Review", False, "Failed to create review")
+
+    def test_get_salon_reviews(self):
+        """Test getting salon reviews"""
+        if not self.salon_id:
+            return self.log_test("Get Salon Reviews", False, "No salon ID available")
+            
+        success, response = self.make_request('GET', f'/api/salons/{self.salon_id}/reviews', auth_required=False)
+        if success and response:
+            data = response.json()
+            review_count = len(data) if isinstance(data, list) else 0
+            return self.log_test("Get Salon Reviews", True, f"Found {review_count} reviews")
+        return self.log_test("Get Salon Reviews", False, "Failed to get salon reviews")
+
+    def test_create_stylist(self):
+        """Test creating a stylist"""
+        if not self.salon_id or not hasattr(self, 'owner_token'):
+            return self.log_test("Create Stylist", False, "Missing salon ID or owner token")
+            
+        # Switch to owner token
+        original_token = self.token
+        self.token = self.owner_token
+        
+        stylist_data = {
+            "salon_id": self.salon_id,
+            "user_id": self.user_id,  # Use existing test user as stylist
+            "specialties": ["Haarschnitt", "Färbung"],
+            "bio": "Erfahrener Stylist mit 5 Jahren Berufserfahrung",
+            "experience_years": 5,
+            "languages": ["de", "en"],
+            "working_hours": {
+                "monday": {"open": "09:00", "close": "17:00"},
+                "tuesday": {"open": "09:00", "close": "17:00"}
+            }
+        }
+        
+        success, response = self.make_request('POST', '/api/stylists', stylist_data)
+        if success and response:
+            data = response.json()
+            self.stylist_id = data.get('id')
+            result = self.log_test("Create Stylist", True, f"Stylist ID: {self.stylist_id}")
+        else:
+            result = self.log_test("Create Stylist", False, "Failed to create stylist")
+        
+        # Restore original token
+        self.token = original_token
+        return result
+
+    def test_get_salon_stylists(self):
+        """Test getting salon stylists"""
+        if not self.salon_id:
+            return self.log_test("Get Salon Stylists", False, "No salon ID available")
+            
+        success, response = self.make_request('GET', f'/api/salons/{self.salon_id}/stylists', auth_required=False)
+        if success and response:
+            data = response.json()
+            stylist_count = len(data) if isinstance(data, list) else 0
+            return self.log_test("Get Salon Stylists", True, f"Found {stylist_count} stylists")
+        return self.log_test("Get Salon Stylists", False, "Failed to get salon stylists")
+
+    def test_create_product(self):
+        """Test creating a product"""
+        if not self.salon_id or not hasattr(self, 'owner_token'):
+            return self.log_test("Create Product", False, "Missing salon ID or owner token")
+            
+        # Switch to owner token
+        original_token = self.token
+        self.token = self.owner_token
+        
+        product_data = {
+            "name": "Premium Shampoo",
+            "description": "Hochwertiges Shampoo für alle Haartypen",
+            "price": 25.99,
+            "category": "Haarpflege",
+            "salon_id": self.salon_id,
+            "stock_quantity": 50,
+            "sku": "SHMP001"
+        }
+        
+        success, response = self.make_request('POST', '/api/products', product_data)
+        if success and response:
+            data = response.json()
+            self.product_id = data.get('id')
+            result = self.log_test("Create Product", True, f"Product ID: {self.product_id}")
+        else:
+            result = self.log_test("Create Product", False, "Failed to create product")
+        
+        # Restore original token
+        self.token = original_token
+        return result
+
+    def test_get_salon_products(self):
+        """Test getting salon products"""
+        if not self.salon_id:
+            return self.log_test("Get Salon Products", False, "No salon ID available")
+            
+        success, response = self.make_request('GET', f'/api/salons/{self.salon_id}/products', auth_required=False)
+        if success and response:
+            data = response.json()
+            product_count = len(data) if isinstance(data, list) else 0
+            return self.log_test("Get Salon Products", True, f"Found {product_count} products")
+        return self.log_test("Get Salon Products", False, "Failed to get salon products")
+
+    def test_create_voucher(self):
+        """Test creating a voucher"""
+        if not self.salon_id or not hasattr(self, 'owner_token'):
+            return self.log_test("Create Voucher", False, "Missing salon ID or owner token")
+            
+        # Switch to owner token
+        original_token = self.token
+        self.token = self.owner_token
+        
+        voucher_data = {
+            "code": f"TEST{uuid.uuid4().hex[:6].upper()}",
+            "value": 10.0,
+            "voucher_type": "fixed",
+            "salon_id": self.salon_id,
+            "valid_until": (datetime.now() + timedelta(days=30)).isoformat(),
+            "usage_limit": 100,
+            "min_purchase_amount": 50.0
+        }
+        
+        success, response = self.make_request('POST', '/api/vouchers', voucher_data)
+        if success and response:
+            data = response.json()
+            self.voucher_code = data.get('code')
+            result = self.log_test("Create Voucher", True, f"Voucher Code: {self.voucher_code}")
+        else:
+            result = self.log_test("Create Voucher", False, "Failed to create voucher")
+        
+        # Restore original token
+        self.token = original_token
+        return result
+
+    def test_get_voucher(self):
+        """Test getting voucher by code"""
+        if not hasattr(self, 'voucher_code'):
+            return self.log_test("Get Voucher", False, "No voucher code available")
+            
+        success, response = self.make_request('GET', f'/api/vouchers/{self.voucher_code}', auth_required=False)
+        if success and response:
+            data = response.json()
+            return self.log_test("Get Voucher", True, f"Voucher value: {data.get('value', 'unknown')}")
+        return self.log_test("Get Voucher", False, "Failed to get voucher")
+
+    def test_update_appointment_status(self):
+        """Test updating appointment status"""
+        if not self.appointment_id or not self.token:
+            return self.log_test("Update Appointment Status", False, "Missing appointment ID or token")
+            
+        success, response = self.make_request('PUT', f'/api/appointments/{self.appointment_id}/status?status=confirmed')
+        if success and response:
+            data = response.json()
+            return self.log_test("Update Appointment Status", True, "Status updated successfully")
+        return self.log_test("Update Appointment Status", False, "Failed to update appointment status")
+
+    def test_salon_filtering(self):
+        """Test salon filtering functionality"""
+        # Test city filter
+        success, response = self.make_request('GET', '/api/salons?city=Berlin', auth_required=False)
+        if success and response:
+            data = response.json()
+            berlin_salons = len(data) if isinstance(data, list) else 0
+            city_filter_works = self.log_test("Salon City Filter", True, f"Found {berlin_salons} salons in Berlin")
+        else:
+            city_filter_works = self.log_test("Salon City Filter", False, "Failed to filter by city")
+        
+        # Test featured filter
+        success, response = self.make_request('GET', '/api/salons?featured=true', auth_required=False)
+        if success and response:
+            data = response.json()
+            featured_salons = len(data) if isinstance(data, list) else 0
+            featured_filter_works = self.log_test("Salon Featured Filter", True, f"Found {featured_salons} featured salons")
+        else:
+            featured_filter_works = self.log_test("Salon Featured Filter", False, "Failed to filter by featured")
+        
+        return city_filter_works and featured_filter_works
+
+    def test_role_based_access(self):
+        """Test role-based access control"""
+        # Test customer accessing appointments (should only see their own)
+        success, response = self.make_request('GET', '/api/appointments')
+        if success and response:
+            data = response.json()
+            customer_appointments = len(data) if isinstance(data, list) else 0
+            customer_access_works = self.log_test("Customer Appointment Access", True, f"Customer sees {customer_appointments} appointments")
+        else:
+            customer_access_works = self.log_test("Customer Appointment Access", False, "Failed to get customer appointments")
+        
+        # Test salon owner accessing appointments (should see all salon appointments)
+        if hasattr(self, 'owner_token'):
+            original_token = self.token
+            self.token = self.owner_token
+            
+            success, response = self.make_request('GET', '/api/appointments')
+            if success and response:
+                data = response.json()
+                owner_appointments = len(data) if isinstance(data, list) else 0
+                owner_access_works = self.log_test("Owner Appointment Access", True, f"Owner sees {owner_appointments} appointments")
+            else:
+                owner_access_works = self.log_test("Owner Appointment Access", False, "Failed to get owner appointments")
+            
+            self.token = original_token
+        else:
+            owner_access_works = self.log_test("Owner Appointment Access", False, "No owner token available")
+        
+        return customer_access_works and owner_access_works
+
+    def test_jwt_token_validation(self):
+        """Test JWT token validation"""
+        # Test with invalid token
+        original_token = self.token
+        self.token = "invalid_token_12345"
+        
+        success, response = self.make_request('GET', '/api/auth/me', expected_status=401)
+        invalid_token_rejected = success  # Should return 401 for invalid token
+        
+        # Test with no token
+        self.token = None
+        success, response = self.make_request('GET', '/api/auth/me', expected_status=401)
+        no_token_rejected = success  # Should return 401 for no token
+        
+        # Restore valid token
+        self.token = original_token
+        
+        result1 = self.log_test("Invalid Token Rejection", invalid_token_rejected, "Invalid token properly rejected")
+        result2 = self.log_test("No Token Rejection", no_token_rejected, "Missing token properly rejected")
+        
+        return result1 and result2
+
+    def test_data_persistence(self):
+        """Test data persistence across requests"""
+        # Get salon again to verify it persists
+        if not self.salon_id:
+            return self.log_test("Data Persistence", False, "No salon ID to test persistence")
+            
+        success, response = self.make_request('GET', f'/api/salons/{self.salon_id}', auth_required=False)
+        if success and response:
+            data = response.json()
+            salon_persists = data.get('name') == 'Test Salon'
+            return self.log_test("Data Persistence", salon_persists, f"Salon data persists: {salon_persists}")
+        return self.log_test("Data Persistence", False, "Failed to verify data persistence")
+
+    def test_error_handling(self):
+        """Test API error handling"""
+        # Test 404 for non-existent salon
+        success, response = self.make_request('GET', '/api/salons/nonexistent123', expected_status=404, auth_required=False)
+        not_found_handled = success
+        
+        # Test 400 for invalid date format in available slots
+        success, response = self.make_request('GET', '/api/appointments/available-slots?salon_id=test&service_id=test&date=invalid-date', expected_status=400, auth_required=False)
+        bad_request_handled = success
+        
+        result1 = self.log_test("404 Error Handling", not_found_handled, "Non-existent resource returns 404")
+        result2 = self.log_test("400 Error Handling", bad_request_handled, "Invalid request returns 400")
+        
+        return result1 and result2
         """Run all API tests"""
         print("🚀 Starting SalonManager Backend API Tests")
         print("=" * 50)
