@@ -12,6 +12,9 @@ import {
   DevicePhoneMobileIcon,
   SparklesIcon,
   ChartBarIcon,
+  ScissorsIcon,
+  CurrencyEuroIcon,
+  ShieldCheckIcon,
 } from '@heroicons/react/24/outline';
 import * as salonService from '../services/salonService';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -50,34 +53,34 @@ const HomePage = () => {
 
   const features = [
     {
-      icon: CalendarDaysIcon,
-      title: 'Einfache Terminbuchung',
-      description: 'Buche deinen Termin online in wenigen Klicks - 24/7 verfügbar.',
+      icon: ScissorsIcon,
+      title: 'Premium Barber Services',
+      description: 'Professionelle Haarschnitte von erfahrenen Barbieren und Stylisten.',
     },
     {
       icon: MapPinIcon,
-      title: 'Salons in deiner Nähe',
-      description: 'Finde die besten Salons und Studios in deiner Stadt.',
+      title: 'Standorte in deiner Nähe',
+      description: 'Finde erstklassige Barbershops und Salons in deiner Umgebung.',
+    },
+    {
+      icon: CalendarDaysIcon,
+      title: 'Online Terminbuchung',
+      description: 'Buche deinen Termin rund um die Uhr - schnell und unkompliziert.',
     },
     {
       icon: StarIcon,
-      title: 'Bewertungen & Reviews',
-      description: 'Echte Bewertungen helfen dir bei der Auswahl des perfekten Salons.',
+      title: 'Bewertete Qualität',
+      description: 'Nur die besten Barbiere mit hervorragenden Kundenbewertungen.',
     },
     {
       icon: CreditCardIcon,
-      title: 'Sichere Zahlung',
-      description: 'Bezahle sicher online mit verschiedenen Zahlungsmethoden.',
-    },
-    {
-      icon: DevicePhoneMobileIcon,
-      title: 'Mobile App',
-      description: 'Verwalte deine Termine unterwegs mit unserer PWA-App.',
+      title: 'Sichere Bezahlung',
+      description: 'Bezahle sicher online oder vor Ort - wie es dir passt.',
     },
     {
       icon: SparklesIcon,
-      title: 'KI-Empfehlungen',
-      description: 'Erhalte personalisierte Frisur- und Terminvorschläge.',
+      title: 'Premium Erfahrung',
+      description: 'Genieße eine erstklassige Atmosphäre und professionelle Beratung.',
     },
   ];
 
@@ -85,106 +88,111 @@ const HomePage = () => {
     {
       icon: UserGroupIcon,
       title: 'Kundenverwaltung',
-      description: 'Verwalte alle Kunden zentral mit detaillierten Profilen.',
-    },
-    {
-      icon: CalendarDaysIcon,
-      title: 'Terminplanung',
-      description: 'Intelligente Terminplanung mit Konfliktprüfung.',
+      description: 'Professionelle Verwaltung deiner Stammkunden.',
     },
     {
       icon: ChartBarIcon,
-      title: 'Analytics & Reports',
-      description: 'Detaillierte Auswertungen und Geschäftsanalysen.',
+      title: 'Geschäftsanalysen',
+      description: 'Detaillierte Einblicke in dein Barbershop-Business.',
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Sichere Plattform',
+      description: 'Datenschutz und Sicherheit auf höchstem Niveau.',
     },
   ];
 
   const stats = [
-    { number: '5.000+', label: 'Zufriedene Kunden' },
-    { number: '250+', label: 'Partner Salons' },
-    { number: '50.000+', label: 'Termine gebucht' },
-    { number: '4.8/5', label: 'Durchschnittsbewertung' },
+    { number: '10.000+', label: 'Zufriedene Kunden' },
+    { number: '500+', label: 'Partner Barbershops' },
+    { number: '100.000+', label: 'Termine gebucht' },
+    { number: '4.9/5', label: 'Kundenbewertung' },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="hero-section hero-pattern relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800"></div>
+      <section className="hero-section hero-pattern relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-800"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary-900 dark:text-white mb-6">
-              Der moderne Weg zu
-              <span className="text-gradient-primary"> deinem Traumtermin</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8">
+              Premium
+              <span className="text-gradient-gold block"> Barber Experience</span>
             </h1>
-            <p className="text-xl text-secondary-600 dark:text-secondary-300 mb-8 max-w-3xl mx-auto">
-              Entdecke die besten Salons in deiner Stadt, buche Termine online 
-              und genieße eine erstklassige Beauty-Erfahrung.
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Entdecke die besten Barbershops deiner Stadt. Buche deinen Termin online 
+              und erlebe erstklassige Barbier-Kunst.
             </p>
 
             {/* Search Form */}
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-12">
-              <div className="flex flex-col sm:flex-row gap-3 p-2 bg-white dark:bg-secondary-800 rounded-2xl shadow-lg">
+            <form onSubmit={handleSearch} className="max-w-3xl mx-auto mb-16">
+              <div className="flex flex-col md:flex-row gap-4 p-3 bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl border border-gray-700">
                 <div className="flex-1 relative">
-                  <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-secondary-400" />
+                  <ScissorsIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-500" />
                   <input
                     type="text"
-                    placeholder="Salon, Service oder Stylist..."
+                    placeholder="Barbershop, Service oder Barber..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-0 rounded-xl focus:ring-2 focus:ring-primary-500 dark:bg-secondary-700 dark:text-white"
+                    className="w-full pl-12 pr-4 py-4 bg-transparent text-white placeholder-gray-400 border-0 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                   />
                 </div>
                 <div className="flex-1 relative">
-                  <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-secondary-400" />
+                  <MapPinIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-500" />
                   <input
                     type="text"
                     placeholder="Stadt oder PLZ..."
                     value={searchCity}
                     onChange={(e) => setSearchCity(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border-0 rounded-xl focus:ring-2 focus:ring-primary-500 dark:bg-secondary-700 dark:text-white"
+                    className="w-full pl-12 pr-4 py-4 bg-transparent text-white placeholder-gray-400 border-0 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="btn-primary px-8 py-3 rounded-xl font-semibold whitespace-nowrap"
+                  className="btn-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap"
                 >
-                  Suchen
+                  TERMIN FINDEN
                 </button>
               </div>
             </form>
 
             {/* Quick Actions */}
             {!isAuthenticated && (
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
                   to="/register"
-                  className="btn-primary px-8 py-3 rounded-xl font-semibold"
+                  className="btn-primary px-10 py-4 rounded-xl font-bold text-lg"
                 >
-                  Kostenlos registrieren
+                  KOSTENLOS REGISTRIEREN
                 </Link>
                 <Link
                   to="/salons"
-                  className="btn-outline px-8 py-3 rounded-xl font-semibold dark:border-secondary-600 dark:text-secondary-300"
+                  className="btn-outline px-10 py-4 rounded-xl font-bold text-lg"
                 >
-                  Salons entdecken
+                  BARBERSHOPS ENTDECKEN
                 </Link>
               </div>
             )}
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-1/4 left-8 w-4 h-4 bg-yellow-500 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-12 w-6 h-6 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white dark:bg-secondary-800 border-b border-secondary-200 dark:border-secondary-700">
+      <section className="stats-section py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-primary-600 mb-2">
+              <div key={index} className="group">
+                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-2 group-hover:scale-110 transition-transform duration-300">
                   {stat.number}
                 </div>
-                <div className="text-secondary-600 dark:text-secondary-300">
+                <div className="text-gray-400 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -194,14 +202,14 @@ const HomePage = () => {
       </section>
 
       {/* Featured Salons */}
-      <section className="py-20 bg-secondary-50 dark:bg-secondary-900">
+      <section className="section-dark py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Beliebte Salons
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Premium <span className="text-gradient-gold">Barbershops</span>
             </h2>
-            <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto">
-              Entdecke die bestbewerteten Salons in deiner Nähe
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Entdecke die besten Barbershops mit den erfahrensten Barbieren
             </p>
           </div>
 
@@ -210,7 +218,7 @@ const HomePage = () => {
               <LoadingSpinner size="lg" />
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredSalons.map((salon) => (
                 <Link
                   key={salon.id}
@@ -219,26 +227,36 @@ const HomePage = () => {
                 >
                   <div className="relative">
                     <img
-                      src={salon.images?.[0] || '/api/placeholder/300/200'}
+                      src={salon.images?.[0] || '/api/placeholder/400/250'}
                       alt={salon.name}
                       className="salon-card-image"
                     />
                     <div className="salon-card-overlay group-hover:opacity-70" />
                     <div className="salon-card-badge">
                       <StarIcon className="w-4 h-4 text-yellow-500 mr-1" />
-                      {salon.rating?.toFixed(1) || '0.0'}
+                      {salon.rating?.toFixed(1) || '5.0'}
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-xl font-bold text-white mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {salon.name}
+                      </h3>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-white mb-3">
                       {salon.name}
                     </h3>
-                    <p className="text-secondary-600 dark:text-secondary-300 mb-3 line-clamp-2">
-                      {salon.description}
+                    <p className="text-gray-400 mb-4 line-clamp-2">
+                      {salon.description || 'Professionelle Barbier-Services in erstklassiger Atmosphäre'}
                     </p>
-                    <div className="flex items-center text-secondary-500 dark:text-secondary-400 text-sm">
-                      <MapPinIcon className="w-4 h-4 mr-1" />
-                      {salon.city}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-gray-400">
+                        <MapPinIcon className="w-4 h-4 mr-2" />
+                        {salon.city}
+                      </div>
+                      <div className="text-yellow-500 font-semibold">
+                        {salon.price_range}
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -249,36 +267,36 @@ const HomePage = () => {
           <div className="text-center">
             <Link
               to="/salons"
-              className="btn-primary px-8 py-3 rounded-xl font-semibold"
+              className="btn-primary px-10 py-4 rounded-xl font-bold text-lg"
             >
-              Alle Salons ansehen
+              ALLE BARBERSHOPS ANSEHEN
             </Link>
           </div>
         </div>
       </section>
 
       {/* Features for Customers */}
-      <section className="py-20 bg-white dark:bg-secondary-800">
+      <section className="section-elevated py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-              Warum SalonManager?
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Warum <span className="text-gradient-gold">BarberManager</span>?
             </h2>
-            <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto">
-              Moderne Features für die beste Beauty-Erfahrung
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Die moderne Plattform für Premium Barbier-Erlebnisse
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {features.map((feature, index) => (
-              <div key={index} className="card text-center p-8 hover-lift">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+              <div key={index} className="card text-center p-10 hover-lift group">
+                <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-3">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-secondary-600 dark:text-secondary-300">
+                <p className="text-gray-400 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -288,27 +306,27 @@ const HomePage = () => {
       </section>
 
       {/* For Salons Section */}
-      <section className="py-20 bg-primary-600 text-white">
+      <section className="section-gold py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Für Salon-Inhaber
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+              Für Barbershop-Besitzer
             </h2>
-            <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              Moderne Salon-Verwaltung leicht gemacht
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
+              Digitalisiere dein Barbershop-Business und steigere deinen Erfolg
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
             {salonFeatures.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-20 h-20 bg-black bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-8">
+                  <feature.icon className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-2xl font-bold text-black mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-primary-100">
+                <p className="text-gray-800">
                   {feature.description}
                 </p>
               </div>
@@ -318,35 +336,35 @@ const HomePage = () => {
           <div className="text-center">
             <Link
               to="/register"
-              className="bg-white text-primary-600 px-8 py-3 rounded-xl font-semibold hover:bg-primary-50 transition-all duration-200"
+              className="bg-black text-yellow-500 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-900 transition-all duration-200 inline-block"
             >
-              Salon registrieren
+              BARBERSHOP REGISTRIEREN
             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary-50 dark:bg-secondary-900">
+      <section className="section-dark py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-6">
-            Bereit für deinen nächsten Termin?
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">
+            Bereit für dein <span className="text-gradient-gold">Premium-Erlebnis</span>?
           </h2>
-          <p className="text-xl text-secondary-600 dark:text-secondary-300 mb-8">
-            Registriere dich kostenlos und entdecke die Zukunft der Terminbuchung.
+          <p className="text-xl text-gray-300 mb-12">
+            Registriere dich kostenlos und entdecke die besten Barbershops deiner Stadt.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/register"
-              className="btn-primary px-8 py-3 rounded-xl font-semibold"
+              className="btn-primary px-10 py-4 rounded-xl font-bold text-lg"
             >
-              Jetzt registrieren
+              KOSTENLOS REGISTRIEREN
             </Link>
             <Link
               to="/salons"
-              className="btn-outline px-8 py-3 rounded-xl font-semibold"
+              className="btn-outline px-10 py-4 rounded-xl font-bold text-lg"
             >
-              Salons entdecken
+              BARBERSHOPS ENTDECKEN
             </Link>
           </div>
         </div>
