@@ -675,6 +675,24 @@ class SalonManagerAPITester:
         self.test_qr_code()
         self.test_salon_analytics()
         
+        # Extended feature tests
+        self.test_create_review()
+        self.test_get_salon_reviews()
+        self.test_create_stylist()
+        self.test_get_salon_stylists()
+        self.test_create_product()
+        self.test_get_salon_products()
+        self.test_create_voucher()
+        self.test_get_voucher()
+        self.test_update_appointment_status()
+        
+        # System tests
+        self.test_salon_filtering()
+        self.test_role_based_access()
+        self.test_jwt_token_validation()
+        self.test_data_persistence()
+        self.test_error_handling()
+        
         # Print summary
         print("\n" + "=" * 50)
         print(f"📊 Test Results: {self.tests_passed}/{self.tests_run} tests passed")
