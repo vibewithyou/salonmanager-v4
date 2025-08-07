@@ -405,7 +405,14 @@ class SalonManagerAPITester:
             data = response.json()
             review_count = len(data) if isinstance(data, list) else 0
             return self.log_test("Get Salon Reviews", True, f"Found {review_count} reviews")
-        return self.log_test("Get Salon Reviews", False, "Failed to get salon reviews")
+        else:
+            if response:
+                try:
+                    error_detail = response.json().get('detail', f'HTTP {response.status_code}')
+                    return self.log_test("Get Salon Reviews", False, f"Error: {error_detail}")
+                except:
+                    return self.log_test("Get Salon Reviews", False, f"HTTP {response.status_code}")
+            return self.log_test("Get Salon Reviews", False, "No response")
 
     def test_create_stylist(self):
         """Test creating a stylist"""
